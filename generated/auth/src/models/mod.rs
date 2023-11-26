@@ -70,6 +70,7 @@ pub mod invitation_validity;
 pub use self::invitation_validity::InvitationValidity;
 pub mod invitations;
 pub use self::invitations::Invitations;
+#[allow(non_snake_case)]
 pub mod ______________invited_user_environment_information__inner;
 pub use self::______________invited_user_environment_information__inner::InvitedUserEnvironmentInformationInner;
 pub mod invoice_language;
