@@ -1,0 +1,13 @@
+[package]
+name = "saasus-sdk-rust"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+apilog = { path = "generated/apilog" }
+auth = { path = "generated/auth" }
+awsmarketplace = { path = "generated/awsmarketplace" }
+billing = { path = "generated/billing" }
+communication = { path = "generated/communication" }
+integration = { path = "generated/integration" }
+pricing = { path = "generated/pricing" }
