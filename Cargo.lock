@@ -34,7 +34,7 @@ dependencies = [
 
 [[package]]
 name = "apilog"
-version = "1.0.0"
+version = "0.1.0"
 dependencies = [
  "base64",
  "chrono",
@@ -53,7 +53,7 @@ dependencies = [
 
 [[package]]
 name = "auth"
-version = "1.0.0"
+version = "0.1.0"
 dependencies = [
  "base64",
  "chrono",
@@ -78,7 +78,7 @@ checksum = "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa"
 
 [[package]]
 name = "awsmarketplace"
-version = "1.0.0"
+version = "0.1.0"
 dependencies = [
  "base64",
  "chrono",
@@ -122,7 +122,7 @@ dependencies = [
 
 [[package]]
 name = "billing"
-version = "1.0.0"
+version = "0.1.0"
 dependencies = [
  "base64",
  "chrono",
@@ -209,7 +209,7 @@ dependencies = [
 
 [[package]]
 name = "communication"
-version = "1.0.0"
+version = "0.1.0"
 dependencies = [
  "base64",
  "chrono",
@@ -590,7 +590,7 @@ dependencies = [
 
 [[package]]
 name = "integration"
-version = "1.0.0"
+version = "0.1.0"
 dependencies = [
  "base64",
  "chrono",
@@ -784,7 +784,7 @@ checksum = "26072860ba924cbfa98ea39c8c19b4dd6a4a25423dbdf219c1eca91aa0cf6964"
 
 [[package]]
 name = "pricing"
-version = "1.0.0"
+version = "0.1.0"
 dependencies = [
  "base64",
  "chrono",

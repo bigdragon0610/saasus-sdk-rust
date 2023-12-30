@@ -1,10 +1,9 @@
 [package]
 name = "awsmarketplace"
-version = "1.0.0"
-authors = ["OpenAPI Generator team and contributors"]
+version.workspace = true
+authors.workspace = true
 description = "SaaSus AWS Marketplace API Schema"
 # Override this license by providing a License Object in the OpenAPI.
-license = "Unlicense"
 edition = "2018"
 
 [dependencies]

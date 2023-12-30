@@ -1,7 +1,13 @@
 [package]
 name = "saasus-sdk-rust"
 version = "0.1.0"
+authors = ["Ryudai Anada (@bigdragon0610)"]
+description = "SaaSus SDK for Rust"
 edition = "2018"
+
+[workspace.package]
+version = "0.1.0"
+authors = ["Ryudai Anada (@bigdragon0610)"]
 
 [dependencies]
 apilog = { path = "generated/apilog" }
