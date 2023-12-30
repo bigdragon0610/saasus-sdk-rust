@@ -35,6 +35,8 @@ impl<C: hyper::client::connect::Connect> MeteringApiClient<C>
 }
 
 pub trait MeteringApi {
+    fn create_metering_unit(&self, body: Option<crate::models::MeteringUnitProps>) -> Pin<Box<dyn Future<Output = Result<crate::models::MeteringUnit, Error>>>>;
+    fn delete_metering_unit_by_id(&self, metering_unit_id: &str) -> Pin<Box<dyn Future<Output = Result<(), Error>>>>;
     fn delete_metering_unit_timestamp_count(&self, tenant_id: &str, metering_unit_name: &str, timestamp: i32) -> Pin<Box<dyn Future<Output = Result<(), Error>>>>;
     fn get_metering_unit_date_count_by_tenant_id_and_unit_name_and_date(&self, tenant_id: &str, metering_unit_name: &str, date: &str) -> Pin<Box<dyn Future<Output = Result<crate::models::MeteringUnitDateCount, Error>>>>;
     fn get_metering_unit_date_count_by_tenant_id_and_unit_name_and_date_period(&self, tenant_id: &str, metering_unit_name: &str, start_timestamp: Option<i32>, end_timestamp: Option<i32>) -> Pin<Box<dyn Future<Output = Result<crate::models::MeteringUnitDatePeriodCounts, Error>>>>;
@@ -43,12 +45,33 @@ pub trait MeteringApi {
     fn get_metering_unit_month_count_by_tenant_id_and_unit_name_and_month(&self, tenant_id: &str, metering_unit_name: &str, month: &str) -> Pin<Box<dyn Future<Output = Result<crate::models::MeteringUnitMonthCount, Error>>>>;
     fn get_metering_unit_month_count_by_tenant_id_and_unit_name_this_month(&self, tenant_id: &str, metering_unit_name: &str) -> Pin<Box<dyn Future<Output = Result<crate::models::MeteringUnitMonthCount, Error>>>>;
     fn get_metering_unit_month_counts_by_tenant_id_and_month(&self, tenant_id: &str, month: &str) -> Pin<Box<dyn Future<Output = Result<crate::models::MeteringUnitMonthCounts, Error>>>>;
+    fn get_metering_units(&self, ) -> Pin<Box<dyn Future<Output = Result<crate::models::MeteringUnits, Error>>>>;
+    fn update_metering_unit_by_id(&self, metering_unit_id: &str, body: Option<crate::models::MeteringUnitProps>) -> Pin<Box<dyn Future<Output = Result<(), Error>>>>;
     fn update_metering_unit_timestamp_count(&self, tenant_id: &str, metering_unit_name: &str, timestamp: i32, update_metering_unit_timestamp_count_param: Option<crate::models::UpdateMeteringUnitTimestampCountParam>) -> Pin<Box<dyn Future<Output = Result<crate::models::MeteringUnitTimestampCount, Error>>>>;
     fn update_metering_unit_timestamp_count_now(&self, tenant_id: &str, metering_unit_name: &str, update_metering_unit_timestamp_count_now_param: Option<crate::models::UpdateMeteringUnitTimestampCountNowParam>) -> Pin<Box<dyn Future<Output = Result<crate::models::MeteringUnitTimestampCount, Error>>>>;
 }
 
 impl<C: hyper::client::connect::Connect>MeteringApi for MeteringApiClient<C>
     where C: Clone + std::marker::Send + Sync {
+    #[allow(unused_mut)]
+    fn create_metering_unit(&self, body: Option<crate::models::MeteringUnitProps>) -> Pin<Box<dyn Future<Output = Result<crate::models::MeteringUnit, Error>>>> {
+        let mut req = __internal_request::Request::new(hyper::Method::POST, "/metering/units".to_string())
+        ;
+        req = req.with_body_param(body);
+
+        req.execute(self.configuration.borrow())
+    }
+
+    #[allow(unused_mut)]
+    fn delete_metering_unit_by_id(&self, metering_unit_id: &str) -> Pin<Box<dyn Future<Output = Result<(), Error>>>> {
+        let mut req = __internal_request::Request::new(hyper::Method::DELETE, "/metering/units/{metering_unit_id}".to_string())
+        ;
+        req = req.with_path_param("metering_unit_id".to_string(), metering_unit_id.to_string());
+        req = req.returns_nothing();
+
+        req.execute(self.configuration.borrow())
+    }
+
     #[allow(unused_mut)]
     fn delete_metering_unit_timestamp_count(&self, tenant_id: &str, metering_unit_name: &str, timestamp: i32) -> Pin<Box<dyn Future<Output = Result<(), Error>>>> {
         let mut req = __internal_request::Request::new(hyper::Method::DELETE, "/metering/tenants/{tenant_id}/units/{metering_unit_name}/timestamp/{timestamp}".to_string())
@@ -137,6 +160,25 @@ impl<C: hyper::client::connect::Connect>MeteringApi for MeteringApiClient<C>
         ;
         req = req.with_path_param("tenant_id".to_string(), tenant_id.to_string());
         req = req.with_path_param("month".to_string(), month.to_string());
+
+        req.execute(self.configuration.borrow())
+    }
+
+    #[allow(unused_mut)]
+    fn get_metering_units(&self, ) -> Pin<Box<dyn Future<Output = Result<crate::models::MeteringUnits, Error>>>> {
+        let mut req = __internal_request::Request::new(hyper::Method::GET, "/metering/units".to_string())
+        ;
+
+        req.execute(self.configuration.borrow())
+    }
+
+    #[allow(unused_mut)]
+    fn update_metering_unit_by_id(&self, metering_unit_id: &str, body: Option<crate::models::MeteringUnitProps>) -> Pin<Box<dyn Future<Output = Result<(), Error>>>> {
+        let mut req = __internal_request::Request::new(hyper::Method::PATCH, "/metering/units/{metering_unit_id}".to_string())
+        ;
+        req = req.with_path_param("metering_unit_id".to_string(), metering_unit_id.to_string());
+        req = req.with_body_param(body);
+        req = req.returns_nothing();
 
         req.execute(self.configuration.borrow())
     }

@@ -1,6 +1,4 @@
 .gitignore
-.openapi-generator-ignore
-.travis.yml
 Cargo.toml
 README.md
 docs/Error.md
@@ -8,12 +6,10 @@ docs/ErrorApi.md
 docs/StripeApi.md
 docs/StripeInfo.md
 docs/UpdateStripeInfoParam.md
-git_push.sh
 src/apis/client.rs
 src/apis/configuration.rs
 src/apis/error_api.rs
 src/apis/mod.rs
-src/apis/request.rs
 src/apis/stripe_api.rs
 src/lib.rs
 src/models/error.rs

@@ -12,7 +12,6 @@ pub struct APIClient {
     invitation_api: Box<dyn crate::apis::InvitationApi>,
     role_api: Box<dyn crate::apis::RoleApi>,
     saas_user_api: Box<dyn crate::apis::SaasUserApi>,
-    saasus_tenant_api: Box<dyn crate::apis::SaasusTenantApi>,
     tenant_api: Box<dyn crate::apis::TenantApi>,
     tenant_attribute_api: Box<dyn crate::apis::TenantAttributeApi>,
     tenant_user_api: Box<dyn crate::apis::TenantUserApi>,
@@ -34,7 +33,6 @@ impl APIClient {
             invitation_api: Box::new(crate::apis::InvitationApiClient::new(rc.clone())),
             role_api: Box::new(crate::apis::RoleApiClient::new(rc.clone())),
             saas_user_api: Box::new(crate::apis::SaasUserApiClient::new(rc.clone())),
-            saasus_tenant_api: Box::new(crate::apis::SaasusTenantApiClient::new(rc.clone())),
             tenant_api: Box::new(crate::apis::TenantApiClient::new(rc.clone())),
             tenant_attribute_api: Box::new(crate::apis::TenantAttributeApiClient::new(rc.clone())),
             tenant_user_api: Box::new(crate::apis::TenantUserApiClient::new(rc.clone())),
@@ -73,10 +71,6 @@ impl APIClient {
 
     pub fn saas_user_api(&self) -> &dyn crate::apis::SaasUserApi{
         self.saas_user_api.as_ref()
-    }
-
-    pub fn saasus_tenant_api(&self) -> &dyn crate::apis::SaasusTenantApi{
-        self.saasus_tenant_api.as_ref()
     }
 
     pub fn tenant_api(&self) -> &dyn crate::apis::TenantApi{

@@ -26,18 +26,18 @@ All URIs are relative to *https://api.saasus.io/v1/communication*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ErrorApi* | [**return_internal_server_error**](docs/ErrorApi.md#return_internal_server_error) | **Get** /errors/internal-server-error | ステータスコード500でサーバーエラーを返却(Return Internal Server Error)
-*FeedbackApi* | [**create_feedback**](docs/FeedbackApi.md#create_feedback) | **Post** /feedbacks | 
-*FeedbackApi* | [**create_feedback_comment**](docs/FeedbackApi.md#create_feedback_comment) | **Post** /feedbacks/{feedback_id}/comments | 
-*FeedbackApi* | [**create_vote_user**](docs/FeedbackApi.md#create_vote_user) | **Post** /feedbacks/{feedback_id}/votes/users | 
-*FeedbackApi* | [**delete_feedback**](docs/FeedbackApi.md#delete_feedback) | **Delete** /feedbacks/{feedback_id} | 
-*FeedbackApi* | [**delete_feedback_comment**](docs/FeedbackApi.md#delete_feedback_comment) | **Delete** /feedbacks/{feedback_id}/comments/{comment_id} | 
-*FeedbackApi* | [**delete_vote_for_feedback**](docs/FeedbackApi.md#delete_vote_for_feedback) | **Delete** /feedbacks/{feedback_id}/votes/users/{user_id} | 
-*FeedbackApi* | [**get_feedback**](docs/FeedbackApi.md#get_feedback) | **Get** /feedbacks/{feedback_id} | 
-*FeedbackApi* | [**get_feedback_comment**](docs/FeedbackApi.md#get_feedback_comment) | **Get** /feedbacks/{feedback_id}/comments/{comment_id} | 
-*FeedbackApi* | [**get_feedbacks**](docs/FeedbackApi.md#get_feedbacks) | **Get** /feedbacks | 
-*FeedbackApi* | [**update_feedback**](docs/FeedbackApi.md#update_feedback) | **Patch** /feedbacks/{feedback_id} | 
-*FeedbackApi* | [**update_feedback_comment**](docs/FeedbackApi.md#update_feedback_comment) | **Patch** /feedbacks/{feedback_id}/comments/{comment_id} | 
-*FeedbackApi* | [**update_feedback_status**](docs/FeedbackApi.md#update_feedback_status) | **Patch** /feedbacks/{feedback_id}/status | 
+*FeedbackApi* | [**create_feedback**](docs/FeedbackApi.md#create_feedback) | **Post** /feedbacks | フィードバックを起票(Create Feedback)
+*FeedbackApi* | [**create_feedback_comment**](docs/FeedbackApi.md#create_feedback_comment) | **Post** /feedbacks/{feedback_id}/comments | フィードバックへのコメント投稿(Create Feedback Comment)
+*FeedbackApi* | [**create_vote_user**](docs/FeedbackApi.md#create_vote_user) | **Post** /feedbacks/{feedback_id}/votes/users | フィードバックへの投票(Create Vote User)
+*FeedbackApi* | [**delete_feedback**](docs/FeedbackApi.md#delete_feedback) | **Delete** /feedbacks/{feedback_id} | フィードバックを削除(Delete Feedback)
+*FeedbackApi* | [**delete_feedback_comment**](docs/FeedbackApi.md#delete_feedback_comment) | **Delete** /feedbacks/{feedback_id}/comments/{comment_id} | フィードバックへのコメント削除(Delete Feedback Comment)
+*FeedbackApi* | [**delete_vote_for_feedback**](docs/FeedbackApi.md#delete_vote_for_feedback) | **Delete** /feedbacks/{feedback_id}/votes/users/{user_id} | フィードバックへの投票の取消(Delete Vote For Feedback)
+*FeedbackApi* | [**get_feedback**](docs/FeedbackApi.md#get_feedback) | **Get** /feedbacks/{feedback_id} | フィードバックの取得(Get Feedback)
+*FeedbackApi* | [**get_feedback_comment**](docs/FeedbackApi.md#get_feedback_comment) | **Get** /feedbacks/{feedback_id}/comments/{comment_id} | フィードバックへのコメント取得(Get Feedback Comment)
+*FeedbackApi* | [**get_feedbacks**](docs/FeedbackApi.md#get_feedbacks) | **Get** /feedbacks | フィードバックの一覧を取得(Get Feedbacks)
+*FeedbackApi* | [**update_feedback**](docs/FeedbackApi.md#update_feedback) | **Patch** /feedbacks/{feedback_id} | フィードバックの編集(Update Feedback)
+*FeedbackApi* | [**update_feedback_comment**](docs/FeedbackApi.md#update_feedback_comment) | **Patch** /feedbacks/{feedback_id}/comments/{comment_id} | フィードバックへのコメント編集(Update Feedback Comment)
+*FeedbackApi* | [**update_feedback_status**](docs/FeedbackApi.md#update_feedback_status) | **Patch** /feedbacks/{feedback_id}/status | フィードバックのステータス更新(Update Feedback Status)
 
 
 ## Documentation For Models
