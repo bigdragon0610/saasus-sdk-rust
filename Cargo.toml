@@ -11,3 +11,5 @@ billing = { path = "generated/billing" }
 communication = { path = "generated/communication" }
 integration = { path = "generated/integration" }
 pricing = { path = "generated/pricing" }
+hyper = { version = "~0.14", features = ["full"] }
+hyper-tls = "~0.5"

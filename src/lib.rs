@@ -5,3 +5,5 @@ pub use billing;
 pub use communication;
 pub use integration;
 pub use pricing;
+
+pub mod client;
