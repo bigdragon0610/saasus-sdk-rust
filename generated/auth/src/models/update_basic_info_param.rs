@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,13 +13,13 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct UpdateBasicInfoParam {
-    /// ドメイン名(Domain Name)
+    /// Domain Name
     #[serde(rename = "domain_name")]
     pub domain_name: String,
-    /// 認証メールの送信元メールアドレス(Sender email of authentication email)
+    /// Sender email of authentication email
     #[serde(rename = "from_email_address")]
     pub from_email_address: String,
-    /// 認証メールの返信元メールアドレス(Reply-from email address of authentication email)
+    /// Reply-from email address of authentication email
     #[serde(rename = "reply_email_address", skip_serializing_if = "Option::is_none")]
     pub reply_email_address: Option<String>,
 }

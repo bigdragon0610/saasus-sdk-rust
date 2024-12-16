@@ -13,7 +13,7 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Error {
-    /// permission_denied
+    /// Error type
     #[serde(rename = "type")]
     pub r#type: String,
     /// Error message

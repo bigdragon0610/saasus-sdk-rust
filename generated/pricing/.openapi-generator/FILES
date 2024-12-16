@@ -1,5 +1,4 @@
 .gitignore
-Cargo.toml
 README.md
 docs/AggregateUsage.md
 docs/Currency.md

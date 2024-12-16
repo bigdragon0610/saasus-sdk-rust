@@ -13,16 +13,13 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct CreateFeedbackCommentParam {
-    #[serde(rename = "user_id")]
-    pub user_id: String,
     #[serde(rename = "body")]
     pub body: String,
 }
 
 impl CreateFeedbackCommentParam {
-    pub fn new(user_id: String, body: String) -> CreateFeedbackCommentParam {
+    pub fn new(body: String) -> CreateFeedbackCommentParam {
         CreateFeedbackCommentParam {
-            user_id,
             body,
         }
     }

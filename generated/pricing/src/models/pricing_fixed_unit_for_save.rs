@@ -13,20 +13,20 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct PricingFixedUnitForSave {
-    /// 名前(name)
+    /// Name
     #[serde(rename = "name")]
     pub name: String,
-    /// 表示名(display name)
+    /// Display Name
     #[serde(rename = "display_name")]
     pub display_name: String,
-    /// 説明(description)
+    /// Description
     #[serde(rename = "description")]
     pub description: String,
     #[serde(rename = "type")]
     pub r#type: crate::models::UnitType,
     #[serde(rename = "currency")]
     pub currency: crate::models::Currency,
-    /// 料金(price)
+    /// Price
     #[serde(rename = "unit_amount")]
     pub unit_amount: i32,
     #[serde(rename = "recurring_interval")]

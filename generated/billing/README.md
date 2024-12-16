@@ -25,10 +25,10 @@ All URIs are relative to *https://api.saasus.io/v1/billing*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ErrorApi* | [**return_internal_server_error**](docs/ErrorApi.md#return_internal_server_error) | **Get** /errors/internal-server-error | ステータスコード500でサーバーエラーを返却(Return Internal Server Error)
-*StripeApi* | [**delete_stripe_info**](docs/StripeApi.md#delete_stripe_info) | **Delete** /stripe/info | Stripe連携情報を削除(Delete Stripe Connection)
-*StripeApi* | [**get_stripe_info**](docs/StripeApi.md#get_stripe_info) | **Get** /stripe/info | Stripe連携情報を取得(Get Stripe Connection information)
-*StripeApi* | [**update_stripe_info**](docs/StripeApi.md#update_stripe_info) | **Put** /stripe/info | Stripe連携情報を更新(Update Stripe Connection Info)
+*ErrorApi* | [**return_internal_server_error**](docs/ErrorApi.md#return_internal_server_error) | **Get** /errors/internal-server-error | Return Internal Server Error
+*StripeApi* | [**delete_stripe_info**](docs/StripeApi.md#delete_stripe_info) | **Delete** /stripe/info | Delete Stripe Connection
+*StripeApi* | [**get_stripe_info**](docs/StripeApi.md#get_stripe_info) | **Get** /stripe/info | Get Stripe Connection information
+*StripeApi* | [**update_stripe_info**](docs/StripeApi.md#update_stripe_info) | **Put** /stripe/info | Update Stripe Connection Info
 
 
 ## Documentation For Models

@@ -25,43 +25,43 @@ All URIs are relative to *https://api.saasus.io/v1/pricing*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ErrorApi* | [**return_internal_server_error**](docs/ErrorApi.md#return_internal_server_error) | **Get** /errors/internal-server-error | ステータスコード500でサーバーエラーを返却(Return Internal Server Error)
-*MeteringApi* | [**create_metering_unit**](docs/MeteringApi.md#create_metering_unit) | **Post** /metering/units | メータリングユニットの作成(Create Metering Unit)
-*MeteringApi* | [**delete_metering_unit_by_id**](docs/MeteringApi.md#delete_metering_unit_by_id) | **Delete** /metering/units/{metering_unit_id} | メータリングユニットを削除(Delete Metering Unit)
-*MeteringApi* | [**delete_metering_unit_timestamp_count**](docs/MeteringApi.md#delete_metering_unit_timestamp_count) | **Delete** /metering/tenants/{tenant_id}/units/{metering_unit_name}/timestamp/{timestamp} | 指定したタイムスタンプのメータリングユニットカウントを削除(Delete Metering Uunit Count for Specified Timestamp)
-*MeteringApi* | [**get_metering_unit_date_count_by_tenant_id_and_unit_name_and_date**](docs/MeteringApi.md#get_metering_unit_date_count_by_tenant_id_and_unit_name_and_date) | **Get** /metering/tenants/{tenant_id}/units/{metering_unit_name}/date/{date} | 指定した日付のメータリングユニットカウントを取得(Get Metering Unit Count for Specific Date)
-*MeteringApi* | [**get_metering_unit_date_count_by_tenant_id_and_unit_name_and_date_period**](docs/MeteringApi.md#get_metering_unit_date_count_by_tenant_id_and_unit_name_and_date_period) | **Get** /metering/tenants/{tenant_id}/units/{metering_unit_name}/date-period | 指定した日時期間のメータリングユニットカウントを取得(Obtain metering unit counts for a specified date/time period)
-*MeteringApi* | [**get_metering_unit_date_count_by_tenant_id_and_unit_name_today**](docs/MeteringApi.md#get_metering_unit_date_count_by_tenant_id_and_unit_name_today) | **Get** /metering/tenants/{tenant_id}/units/{metering_unit_name}/today | 当日のメータリングユニットカウントを取得(Get Metering Unit Count for the Current Day)
-*MeteringApi* | [**get_metering_unit_date_counts_by_tenant_id_and_date**](docs/MeteringApi.md#get_metering_unit_date_counts_by_tenant_id_and_date) | **Get** /metering/tenants/{tenant_id}/units/date/{date} | 指定日の全メータリングユニットカウントを取得(Get All Metering Unit Counts for a Specified Date)
-*MeteringApi* | [**get_metering_unit_month_count_by_tenant_id_and_unit_name_and_month**](docs/MeteringApi.md#get_metering_unit_month_count_by_tenant_id_and_unit_name_and_month) | **Get** /metering/tenants/{tenant_id}/units/{metering_unit_name}/month/{month} | 指定月のメータリングユニットカウントを取得(Get the Metering Unit Count for the Specified Month)
-*MeteringApi* | [**get_metering_unit_month_count_by_tenant_id_and_unit_name_this_month**](docs/MeteringApi.md#get_metering_unit_month_count_by_tenant_id_and_unit_name_this_month) | **Get** /metering/tenants/{tenant_id}/units/{metering_unit_name}/thismonth | 当月のメータリングユニットカウントを取得(Get Metering Unit Count for the Current Month)
-*MeteringApi* | [**get_metering_unit_month_counts_by_tenant_id_and_month**](docs/MeteringApi.md#get_metering_unit_month_counts_by_tenant_id_and_month) | **Get** /metering/tenants/{tenant_id}/units/month/{month} | 指定月の全メータリングユニットカウントを取得(Get All Metering Unit Counts for the Specified Month)
-*MeteringApi* | [**get_metering_units**](docs/MeteringApi.md#get_metering_units) | **Get** /metering/units | メータリングユニットを取得(Get all metering units)
-*MeteringApi* | [**update_metering_unit_by_id**](docs/MeteringApi.md#update_metering_unit_by_id) | **Patch** /metering/units/{metering_unit_id} | メータリングユニットを更新(Update Metering Unit)
-*MeteringApi* | [**update_metering_unit_timestamp_count**](docs/MeteringApi.md#update_metering_unit_timestamp_count) | **Put** /metering/tenants/{tenant_id}/units/{metering_unit_name}/timestamp/{timestamp} | 指定したタイムスタンプのメータリングユニットカウントを更新(Update Metering Unit Count for Specified Timestamp)
-*MeteringApi* | [**update_metering_unit_timestamp_count_now**](docs/MeteringApi.md#update_metering_unit_timestamp_count_now) | **Put** /metering/tenants/{tenant_id}/units/{metering_unit_name}/now | 現在時刻のメータリングユニットカウントを更新(Update Metering Unit Count for Current Time)
-*PricingMenusApi* | [**create_pricing_menu**](docs/PricingMenusApi.md#create_pricing_menu) | **Post** /menus | プライシング機能メニューを作成(Create a Pricing Feature Menu)
-*PricingMenusApi* | [**delete_pricing_menu**](docs/PricingMenusApi.md#delete_pricing_menu) | **Delete** /menus/{menu_id} | プライシング機能メニューを削除(Delete Pricing Feature Menu)
-*PricingMenusApi* | [**get_pricing_menu**](docs/PricingMenusApi.md#get_pricing_menu) | **Get** /menus/{menu_id} | プライシング機能メニューを取得(Get Pricing Feature Menu)
-*PricingMenusApi* | [**get_pricing_menus**](docs/PricingMenusApi.md#get_pricing_menus) | **Get** /menus | プライシング機能メニュー一覧を取得(Get Pricing Feature Menus)
-*PricingMenusApi* | [**update_pricing_menu**](docs/PricingMenusApi.md#update_pricing_menu) | **Patch** /menus/{menu_id} | プライシング機能メニューを更新(Updated pricing feature menu)
-*PricingPlansApi* | [**create_pricing_plan**](docs/PricingPlansApi.md#create_pricing_plan) | **Post** /plans | 料金プランを作成(Create Pricing Plan)
-*PricingPlansApi* | [**delete_all_plans_and_menus_and_units_and_meters_and_tax_rates**](docs/PricingPlansApi.md#delete_all_plans_and_menus_and_units_and_meters_and_tax_rates) | **Delete** /plans-initialization | 全てのPlans,Menus,Units,Metersの削除(Delete all Plans, Menus, Units, Meters and Tax Rates)
-*PricingPlansApi* | [**delete_pricing_plan**](docs/PricingPlansApi.md#delete_pricing_plan) | **Delete** /plans/{plan_id} | 料金プランを削除(Delete Pricing Plan)
-*PricingPlansApi* | [**delete_stripe_plan**](docs/PricingPlansApi.md#delete_stripe_plan) | **Delete** /stripe | stripe上の商品情報を削除(Delete Product Data from Stripe)
-*PricingPlansApi* | [**get_pricing_plan**](docs/PricingPlansApi.md#get_pricing_plan) | **Get** /plans/{plan_id} | 料金プランを取得(Get Pricing Plan)
-*PricingPlansApi* | [**get_pricing_plans**](docs/PricingPlansApi.md#get_pricing_plans) | **Get** /plans | 料金プラン一覧を取得(Get pricing plan list)
-*PricingPlansApi* | [**link_plan_to_stripe**](docs/PricingPlansApi.md#link_plan_to_stripe) | **Patch** /stripe/init | stripe連携(Connect to Stripe)
-*PricingPlansApi* | [**update_pricing_plan**](docs/PricingPlansApi.md#update_pricing_plan) | **Patch** /plans/{plan_id} | 料金プランを更新(Update Pricing Plan)
-*PricingPlansApi* | [**update_pricing_plans_used**](docs/PricingPlansApi.md#update_pricing_plans_used) | **Patch** /plans/used | 使用済みフラグ更新(Update Used Flag)
-*PricingUnitsApi* | [**create_pricing_unit**](docs/PricingUnitsApi.md#create_pricing_unit) | **Post** /units | プライシングユニットを作成(Create Pricing Unit)
-*PricingUnitsApi* | [**delete_pricing_unit**](docs/PricingUnitsApi.md#delete_pricing_unit) | **Delete** /units/{pricing_unit_id} | プライシングユニットを削除(Delete Pricing Unit)
-*PricingUnitsApi* | [**get_pricing_unit**](docs/PricingUnitsApi.md#get_pricing_unit) | **Get** /units/{pricing_unit_id} | プライシングユニットを取得(Get Pricing Unit)
-*PricingUnitsApi* | [**get_pricing_units**](docs/PricingUnitsApi.md#get_pricing_units) | **Get** /units | プライシングユニットの一覧を取得(Get Pricing Units)
-*PricingUnitsApi* | [**update_pricing_unit**](docs/PricingUnitsApi.md#update_pricing_unit) | **Patch** /units/{pricing_unit_id} | プライシングユニットを更新(Update Pricing Unit)
-*TaxRateApi* | [**create_tax_rate**](docs/TaxRateApi.md#create_tax_rate) | **Post** /tax-rates | 税率の作成(Create Tax Rate)
-*TaxRateApi* | [**get_tax_rates**](docs/TaxRateApi.md#get_tax_rates) | **Get** /tax-rates | 税率を取得します(Get Tax Rates)
-*TaxRateApi* | [**update_tax_rate**](docs/TaxRateApi.md#update_tax_rate) | **Patch** /tax-rates/{tax_rate_id} | 税率を更新(Update Tax Rate)
+*ErrorApi* | [**return_internal_server_error**](docs/ErrorApi.md#return_internal_server_error) | **Get** /errors/internal-server-error | Return Internal Server Error
+*MeteringApi* | [**create_metering_unit**](docs/MeteringApi.md#create_metering_unit) | **Post** /metering/units | Create Metering Unit
+*MeteringApi* | [**delete_metering_unit_by_id**](docs/MeteringApi.md#delete_metering_unit_by_id) | **Delete** /metering/units/{metering_unit_id} | Delete Metering Unit
+*MeteringApi* | [**delete_metering_unit_timestamp_count**](docs/MeteringApi.md#delete_metering_unit_timestamp_count) | **Delete** /metering/tenants/{tenant_id}/units/{metering_unit_name}/timestamp/{timestamp} | Delete Metering Unit Count for Specified Timestamp
+*MeteringApi* | [**get_metering_unit_date_count_by_tenant_id_and_unit_name_and_date**](docs/MeteringApi.md#get_metering_unit_date_count_by_tenant_id_and_unit_name_and_date) | **Get** /metering/tenants/{tenant_id}/units/{metering_unit_name}/date/{date} | Get Metering Unit Count for Specific Date
+*MeteringApi* | [**get_metering_unit_date_count_by_tenant_id_and_unit_name_and_date_period**](docs/MeteringApi.md#get_metering_unit_date_count_by_tenant_id_and_unit_name_and_date_period) | **Get** /metering/tenants/{tenant_id}/units/{metering_unit_name}/date-period | Obtain metering unit counts for a specified date/time period
+*MeteringApi* | [**get_metering_unit_date_count_by_tenant_id_and_unit_name_today**](docs/MeteringApi.md#get_metering_unit_date_count_by_tenant_id_and_unit_name_today) | **Get** /metering/tenants/{tenant_id}/units/{metering_unit_name}/today | Get Metering Unit Count for the Current Day
+*MeteringApi* | [**get_metering_unit_date_counts_by_tenant_id_and_date**](docs/MeteringApi.md#get_metering_unit_date_counts_by_tenant_id_and_date) | **Get** /metering/tenants/{tenant_id}/units/date/{date} | Get All Metering Unit Counts for a Specified Date
+*MeteringApi* | [**get_metering_unit_month_count_by_tenant_id_and_unit_name_and_month**](docs/MeteringApi.md#get_metering_unit_month_count_by_tenant_id_and_unit_name_and_month) | **Get** /metering/tenants/{tenant_id}/units/{metering_unit_name}/month/{month} | Get the Metering Unit Count for the Specified Month
+*MeteringApi* | [**get_metering_unit_month_count_by_tenant_id_and_unit_name_this_month**](docs/MeteringApi.md#get_metering_unit_month_count_by_tenant_id_and_unit_name_this_month) | **Get** /metering/tenants/{tenant_id}/units/{metering_unit_name}/thismonth | Get Metering Unit Count for the Current Month
+*MeteringApi* | [**get_metering_unit_month_counts_by_tenant_id_and_month**](docs/MeteringApi.md#get_metering_unit_month_counts_by_tenant_id_and_month) | **Get** /metering/tenants/{tenant_id}/units/month/{month} | Get All Metering Unit Counts for the Specified Month
+*MeteringApi* | [**get_metering_units**](docs/MeteringApi.md#get_metering_units) | **Get** /metering/units | Get all metering units
+*MeteringApi* | [**update_metering_unit_by_id**](docs/MeteringApi.md#update_metering_unit_by_id) | **Patch** /metering/units/{metering_unit_id} | Update Metering Unit
+*MeteringApi* | [**update_metering_unit_timestamp_count**](docs/MeteringApi.md#update_metering_unit_timestamp_count) | **Put** /metering/tenants/{tenant_id}/units/{metering_unit_name}/timestamp/{timestamp} | Update Metering Unit Count for Specified Timestamp
+*MeteringApi* | [**update_metering_unit_timestamp_count_now**](docs/MeteringApi.md#update_metering_unit_timestamp_count_now) | **Put** /metering/tenants/{tenant_id}/units/{metering_unit_name}/now | Update Metering Unit Count for Current Time
+*PricingMenusApi* | [**create_pricing_menu**](docs/PricingMenusApi.md#create_pricing_menu) | **Post** /menus | Create a Pricing Feature Menu
+*PricingMenusApi* | [**delete_pricing_menu**](docs/PricingMenusApi.md#delete_pricing_menu) | **Delete** /menus/{menu_id} | Delete Pricing Feature Menu
+*PricingMenusApi* | [**get_pricing_menu**](docs/PricingMenusApi.md#get_pricing_menu) | **Get** /menus/{menu_id} | Get Pricing Feature Menu
+*PricingMenusApi* | [**get_pricing_menus**](docs/PricingMenusApi.md#get_pricing_menus) | **Get** /menus | Get Pricing Feature Menus
+*PricingMenusApi* | [**update_pricing_menu**](docs/PricingMenusApi.md#update_pricing_menu) | **Patch** /menus/{menu_id} | Update Pricing Feature Menu
+*PricingPlansApi* | [**create_pricing_plan**](docs/PricingPlansApi.md#create_pricing_plan) | **Post** /plans | Create Pricing Plan
+*PricingPlansApi* | [**delete_all_plans_and_menus_and_units_and_meters_and_tax_rates**](docs/PricingPlansApi.md#delete_all_plans_and_menus_and_units_and_meters_and_tax_rates) | **Delete** /plans-initialization | Delete all Plans, Menus, Units, Meters and Tax Rates
+*PricingPlansApi* | [**delete_pricing_plan**](docs/PricingPlansApi.md#delete_pricing_plan) | **Delete** /plans/{plan_id} | Delete Pricing Plan
+*PricingPlansApi* | [**delete_stripe_plan**](docs/PricingPlansApi.md#delete_stripe_plan) | **Delete** /stripe | Delete Product Data from Stripe
+*PricingPlansApi* | [**get_pricing_plan**](docs/PricingPlansApi.md#get_pricing_plan) | **Get** /plans/{plan_id} | Get Pricing Plan
+*PricingPlansApi* | [**get_pricing_plans**](docs/PricingPlansApi.md#get_pricing_plans) | **Get** /plans | Get Pricing Plans
+*PricingPlansApi* | [**link_plan_to_stripe**](docs/PricingPlansApi.md#link_plan_to_stripe) | **Patch** /stripe/init | Connect to Stripe
+*PricingPlansApi* | [**update_pricing_plan**](docs/PricingPlansApi.md#update_pricing_plan) | **Patch** /plans/{plan_id} | Update Pricing Plan
+*PricingPlansApi* | [**update_pricing_plans_used**](docs/PricingPlansApi.md#update_pricing_plans_used) | **Patch** /plans/used | Update Used Flag
+*PricingUnitsApi* | [**create_pricing_unit**](docs/PricingUnitsApi.md#create_pricing_unit) | **Post** /units | Create Pricing Unit
+*PricingUnitsApi* | [**delete_pricing_unit**](docs/PricingUnitsApi.md#delete_pricing_unit) | **Delete** /units/{pricing_unit_id} | Delete Pricing Unit
+*PricingUnitsApi* | [**get_pricing_unit**](docs/PricingUnitsApi.md#get_pricing_unit) | **Get** /units/{pricing_unit_id} | Get Pricing Unit
+*PricingUnitsApi* | [**get_pricing_units**](docs/PricingUnitsApi.md#get_pricing_units) | **Get** /units | Get Pricing Units
+*PricingUnitsApi* | [**update_pricing_unit**](docs/PricingUnitsApi.md#update_pricing_unit) | **Patch** /units/{pricing_unit_id} | Update Pricing Unit
+*TaxRateApi* | [**create_tax_rate**](docs/TaxRateApi.md#create_tax_rate) | **Post** /tax-rates | Create Tax Rate
+*TaxRateApi* | [**get_tax_rates**](docs/TaxRateApi.md#get_tax_rates) | **Get** /tax-rates | Get Tax Rates
+*TaxRateApi* | [**update_tax_rate**](docs/TaxRateApi.md#update_tax_rate) | **Patch** /tax-rates/{tax_rate_id} | Update Tax Rate
 
 
 ## Documentation For Models

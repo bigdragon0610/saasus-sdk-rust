@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**metering_unit_name** | **String** | 計測ユニット名(metering unit name) | 
-**date** | **String** | 日(date) | 
-**count** | **i32** | 件数(count) | 
+**metering_unit_name** | **String** | Metering unit name | 
+**date** | **String** | Date | 
+**count** | **i32** | Count | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

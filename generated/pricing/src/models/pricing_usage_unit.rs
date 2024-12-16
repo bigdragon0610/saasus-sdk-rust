@@ -13,31 +13,34 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct PricingUsageUnit {
-    /// 上限値(upper limit)
+    /// Upper limit
     #[serde(rename = "upper_count")]
     pub upper_count: i32,
-    /// 使用量あたりの金額(amount per usage)
+    /// Amount per usage
     #[serde(rename = "unit_amount")]
     pub unit_amount: i32,
+    /// Metering unit name
     #[serde(rename = "metering_unit_name")]
     pub metering_unit_name: String,
     #[serde(rename = "aggregate_usage", skip_serializing_if = "Option::is_none")]
     pub aggregate_usage: Option<crate::models::AggregateUsage>,
-    /// 名前(name)
+    /// Name
     #[serde(rename = "name")]
     pub name: String,
-    /// 表示名(display name)
+    /// Display Name
     #[serde(rename = "display_name")]
     pub display_name: String,
-    /// 説明(description)
+    /// Description
     #[serde(rename = "description")]
     pub description: String,
     #[serde(rename = "type")]
     pub r#type: crate::models::UnitType,
     #[serde(rename = "currency")]
     pub currency: crate::models::Currency,
+    /// Universally Unique Identifier
     #[serde(rename = "id")]
     pub id: String,
+    /// Universally Unique Identifier
     #[serde(rename = "metering_unit_id")]
     pub metering_unit_id: String,
     #[serde(rename = "recurring_interval")]

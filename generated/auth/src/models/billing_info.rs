@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,7 +13,7 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct BillingInfo {
-    /// 請求用のテナント名  Tenant name for billing 
+    /// Tenant name for billing
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "address")]

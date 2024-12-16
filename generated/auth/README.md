@@ -1,6 +1,6 @@
 # Rust API client for auth
 
-スキーマ
+Schema
 
 
 ## Overview
@@ -25,85 +25,92 @@ All URIs are relative to *https://api.saasus.io/v1/auth*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AuthInfoApi* | [**get_auth_info**](docs/AuthInfoApi.md#get_auth_info) | **Get** /auth-info | 認証情報を取得(Get Authentication Info)
-*AuthInfoApi* | [**get_identity_providers**](docs/AuthInfoApi.md#get_identity_providers) | **Get** /identity-providers | 
-*AuthInfoApi* | [**get_sign_in_settings**](docs/AuthInfoApi.md#get_sign_in_settings) | **Get** /sign-in-settings | パスワード要件を取得(Get Password Requirements)
-*AuthInfoApi* | [**update_auth_info**](docs/AuthInfoApi.md#update_auth_info) | **Put** /auth-info | 認証情報を更新(Update Authentication Info)
-*AuthInfoApi* | [**update_identity_provider**](docs/AuthInfoApi.md#update_identity_provider) | **Put** /identity-providers | 
-*AuthInfoApi* | [**update_sign_in_settings**](docs/AuthInfoApi.md#update_sign_in_settings) | **Put** /sign-in-settings | パスワード要件を更新(Update Password Requirements)
-*BasicInfoApi* | [**find_notification_messages**](docs/BasicInfoApi.md#find_notification_messages) | **Get** /notification-messages | 通知メールテンプレートを取得(Get Notification Email Templates)
-*BasicInfoApi* | [**get_basic_info**](docs/BasicInfoApi.md#get_basic_info) | **Get** /basic-info | 基本設定情報の取得(Get Basic Configurations)
-*BasicInfoApi* | [**get_customize_page_settings**](docs/BasicInfoApi.md#get_customize_page_settings) | **Get** /customize-page-settings | 認証認可基本情報取得(Get Authentication Authorization Basic Information)
-*BasicInfoApi* | [**get_customize_pages**](docs/BasicInfoApi.md#get_customize_pages) | **Get** /customize-pages | 認証系画面設定情報取得(Get Authentication Page Setting)
-*BasicInfoApi* | [**update_basic_info**](docs/BasicInfoApi.md#update_basic_info) | **Put** /basic-info | 基本設定情報の更新(Update Basic Configurations)
-*BasicInfoApi* | [**update_customize_page_settings**](docs/BasicInfoApi.md#update_customize_page_settings) | **Patch** /customize-page-settings | 認証認可基本情報更新(Update Authentication Authorization Basic Information)
-*BasicInfoApi* | [**update_customize_pages**](docs/BasicInfoApi.md#update_customize_pages) | **Patch** /customize-pages | 認証系画面設定情報設定(Authentication Page Setting)
-*BasicInfoApi* | [**update_notification_messages**](docs/BasicInfoApi.md#update_notification_messages) | **Put** /notification-messages | 通知メールテンプレートを更新(Update Notification Email Template)
-*CredentialApi* | [**create_auth_credentials**](docs/CredentialApi.md#create_auth_credentials) | **Post** /credentials | 認証・認可情報の保存(Save Authentication/Authorization Information)
-*CredentialApi* | [**get_auth_credentials**](docs/CredentialApi.md#get_auth_credentials) | **Get** /credentials | 認証・認可情報の取得(Get Authentication/Authorization Information)
-*EnvApi* | [**create_env**](docs/EnvApi.md#create_env) | **Post** /envs | 環境情報を作成(Create Env Info)
-*EnvApi* | [**delete_env**](docs/EnvApi.md#delete_env) | **Delete** /envs/{env_id} | 環境情報を削除(Delete Env Info)
-*EnvApi* | [**get_env**](docs/EnvApi.md#get_env) | **Get** /envs/{env_id} | 環境情報を取得(Get Env Details)
-*EnvApi* | [**get_envs**](docs/EnvApi.md#get_envs) | **Get** /envs | 環境情報一覧を取得(Get Env Info)
-*EnvApi* | [**update_env**](docs/EnvApi.md#update_env) | **Patch** /envs/{env_id} | 環境情報を更新(Update Env Info)
-*ErrorApi* | [**return_internal_server_error**](docs/ErrorApi.md#return_internal_server_error) | **Get** /errors/internal-server-error | ステータスコード500でサーバーエラーを返却(Return Internal Server Error)
-*InvitationApi* | [**create_tenant_invitation**](docs/InvitationApi.md#create_tenant_invitation) | **Post** /tenants/{tenant_id}/invitations | テナントへの招待を作成(Create Tenant Invitation)
-*InvitationApi* | [**delete_tenant_invitation**](docs/InvitationApi.md#delete_tenant_invitation) | **Delete** /tenants/{tenant_id}/invitations/{invitation_id} | テナントへの招待を削除(Delete Tenant Invitation)
-*InvitationApi* | [**get_invitation_validity**](docs/InvitationApi.md#get_invitation_validity) | **Get** /invitations/{invitation_id}/validity | テナントへの招待の有効性を取得(Get Invitation Validity)
-*InvitationApi* | [**get_tenant_invitation**](docs/InvitationApi.md#get_tenant_invitation) | **Get** /tenants/{tenant_id}/invitations/{invitation_id} | テナントの招待情報を取得(Get Tenant Invitation)
-*InvitationApi* | [**get_tenant_invitations**](docs/InvitationApi.md#get_tenant_invitations) | **Get** /tenants/{tenant_id}/invitations | テナントの招待一覧を取得(Get Tenant Invitations)
-*InvitationApi* | [**validate_invitation**](docs/InvitationApi.md#validate_invitation) | **Patch** /invitations/{invitation_id}/validate | テナントへの招待を検証(Validate Invitation)
-*RoleApi* | [**create_role**](docs/RoleApi.md#create_role) | **Post** /roles | 役割(ロール)を作成(Create Role)
-*RoleApi* | [**delete_role**](docs/RoleApi.md#delete_role) | **Delete** /roles/{role_name} | 役割(ロール)を削除(Delete Role)
-*RoleApi* | [**get_roles**](docs/RoleApi.md#get_roles) | **Get** /roles | 役割(ロール)一覧を取得(Get Roles)
-*SaasUserApi* | [**confirm_email_update**](docs/SaasUserApi.md#confirm_email_update) | **Post** /users/{user_id}/email/confirm | ユーザーのメールアドレス変更確認(Confirm User Email Update)
-*SaasUserApi* | [**confirm_external_user_link**](docs/SaasUserApi.md#confirm_external_user_link) | **Post** /external-users/confirm | 外部アカウントのユーザーの連携確認(Confirm External User Account Link)
-*SaasUserApi* | [**confirm_sign_up_with_aws_marketplace**](docs/SaasUserApi.md#confirm_sign_up_with_aws_marketplace) | **Post** /aws-marketplace/sign-up-confirm | AWS Marketplaceによるユーザー新規登録の確定(Confirm Sign Up with AWS Marketplace)
-*SaasUserApi* | [**create_saas_user**](docs/SaasUserApi.md#create_saas_user) | **Post** /users | SaaSにユーザーを作成(Create SaaS User)
-*SaasUserApi* | [**create_secret_code**](docs/SaasUserApi.md#create_secret_code) | **Post** /users/{user_id}/mfa/software-token/secret-code | 認証アプリケーション登録用のシークレットコードを作成(Creates secret code for authentication application registration)
-*SaasUserApi* | [**delete_saas_user**](docs/SaasUserApi.md#delete_saas_user) | **Delete** /users/{user_id} | ユーザー情報を削除(Delete User)
-*SaasUserApi* | [**get_saas_user**](docs/SaasUserApi.md#get_saas_user) | **Get** /users/{user_id} | ユーザー情報を取得(Get User)
-*SaasUserApi* | [**get_saas_users**](docs/SaasUserApi.md#get_saas_users) | **Get** /users | ユーザー一覧を取得(Get Users)
-*SaasUserApi* | [**get_user_mfa_preference**](docs/SaasUserApi.md#get_user_mfa_preference) | **Get** /users/{user_id}/mfa/preference | ユーザーのMFA設定を取得(Get User's MFA Settings)
-*SaasUserApi* | [**link_aws_marketplace**](docs/SaasUserApi.md#link_aws_marketplace) | **Patch** /aws-marketplace/link | AWS Marketplaceと既存のテナントの連携(Link an existing tenant with AWS Marketplace)
-*SaasUserApi* | [**request_email_update**](docs/SaasUserApi.md#request_email_update) | **Post** /users/{user_id}/email/request | ユーザーのメールアドレス変更要求(Request User Email Update)
-*SaasUserApi* | [**request_external_user_link**](docs/SaasUserApi.md#request_external_user_link) | **Post** /external-users/request | 外部アカウントのユーザー連携要求(Request External User Account Link)
-*SaasUserApi* | [**resend_sign_up_confirmation_email**](docs/SaasUserApi.md#resend_sign_up_confirmation_email) | **Post** /sign-up/resend | 新規登録時の確認メール再送信(Resend Sign Up Confirmation Email)
-*SaasUserApi* | [**sign_up**](docs/SaasUserApi.md#sign_up) | **Post** /sign-up | 新規登録(Sign Up)
-*SaasUserApi* | [**sign_up_with_aws_marketplace**](docs/SaasUserApi.md#sign_up_with_aws_marketplace) | **Post** /aws-marketplace/sign-up | AWS Marketplaceによるユーザー新規登録(Sign Up with AWS Marketplace)
-*SaasUserApi* | [**unlink_provider**](docs/SaasUserApi.md#unlink_provider) | **Delete** /users/{user_id}/providers/{provider_name} | 外部IDプロバイダの連携解除(Unlink external identity providers)
-*SaasUserApi* | [**update_saas_user_email**](docs/SaasUserApi.md#update_saas_user_email) | **Patch** /users/{user_id}/email | メールアドレスを変更(Change Email)
-*SaasUserApi* | [**update_saas_user_password**](docs/SaasUserApi.md#update_saas_user_password) | **Patch** /users/{user_id}/password | パスワードを変更(Change Password)
-*SaasUserApi* | [**update_software_token**](docs/SaasUserApi.md#update_software_token) | **Put** /users/{user_id}/mfa/software-token | 認証アプリケーションを登録(Register Authentication Application)
-*SaasUserApi* | [**update_user_mfa_preference**](docs/SaasUserApi.md#update_user_mfa_preference) | **Patch** /users/{user_id}/mfa/preference | ユーザーのMFA設定を更新(Update User's MFA Settings)
-*TenantApi* | [**create_tenant**](docs/TenantApi.md#create_tenant) | **Post** /tenants | テナントを作成(Create Tenant)
-*TenantApi* | [**create_tenant_and_pricing**](docs/TenantApi.md#create_tenant_and_pricing) | **Patch** /stripe/init | stripe初期設定(Stripe Initial Setting)
-*TenantApi* | [**delete_stripe_tenant_and_pricing**](docs/TenantApi.md#delete_stripe_tenant_and_pricing) | **Delete** /stripe | stripe上の顧客情報・商品情報の削除(Delete Customer and Product From Stripe)
-*TenantApi* | [**delete_tenant**](docs/TenantApi.md#delete_tenant) | **Delete** /tenants/{tenant_id} | テナント情報を削除(Delete Tenant)
-*TenantApi* | [**get_tenant**](docs/TenantApi.md#get_tenant) | **Get** /tenants/{tenant_id} | テナント情報を取得(Get Tenant Details)
-*TenantApi* | [**get_tenant_identity_providers**](docs/TenantApi.md#get_tenant_identity_providers) | **Get** /tenants/{tenant_id}/identity-providers | テナント毎の外部IDプロバイダ取得(Get identity provider per tenant)
-*TenantApi* | [**get_tenants**](docs/TenantApi.md#get_tenants) | **Get** /tenants | テナント一覧取得(Get Tenants)
-*TenantApi* | [**reset_plan**](docs/TenantApi.md#reset_plan) | **Put** /plans/reset | プランに関わる情報を全削除
-*TenantApi* | [**update_tenant**](docs/TenantApi.md#update_tenant) | **Patch** /tenants/{tenant_id} | テナント情報を更新(Update Tenant Details)
-*TenantApi* | [**update_tenant_billing_info**](docs/TenantApi.md#update_tenant_billing_info) | **Put** /tenants/{tenant_id}/billing-info | テナントの請求先情報を更新(Update Tenant Billing Information)
-*TenantApi* | [**update_tenant_identity_provider**](docs/TenantApi.md#update_tenant_identity_provider) | **Put** /tenants/{tenant_id}/identity-providers | テナント毎の外部IDプロバイダ更新(Update identity provider per tenant)
-*TenantApi* | [**update_tenant_plan**](docs/TenantApi.md#update_tenant_plan) | **Put** /tenants/{tenant_id}/plans | テナントのプラン情報を更新(Update Tenant Plan Information)
-*TenantAttributeApi* | [**create_tenant_attribute**](docs/TenantAttributeApi.md#create_tenant_attribute) | **Post** /tenant-attributes | テナント属性の作成(Create Tenant Attribute)
-*TenantAttributeApi* | [**delete_tenant_attribute**](docs/TenantAttributeApi.md#delete_tenant_attribute) | **Delete** /tenant-attributes/{attribute_name} | テナント属性の削除(Delete Tenant Attribute)
-*TenantAttributeApi* | [**get_tenant_attributes**](docs/TenantAttributeApi.md#get_tenant_attributes) | **Get** /tenant-attributes | テナント属性の一覧を取得(Get Tenant Attributes)
-*TenantUserApi* | [**create_tenant_user**](docs/TenantUserApi.md#create_tenant_user) | **Post** /tenants/{tenant_id}/users | テナントにユーザーを作成(Create Tenant User)
-*TenantUserApi* | [**create_tenant_user_roles**](docs/TenantUserApi.md#create_tenant_user_roles) | **Post** /tenants/{tenant_id}/users/{user_id}/envs/{env_id}/roles | テナントのユーザー情報に役割(ロール)を作成(Create Tenant User Role)
-*TenantUserApi* | [**delete_tenant_user**](docs/TenantUserApi.md#delete_tenant_user) | **Delete** /tenants/{tenant_id}/users/{user_id} | テナントのユーザー情報を削除(Delete Tenant User)
-*TenantUserApi* | [**delete_tenant_user_role**](docs/TenantUserApi.md#delete_tenant_user_role) | **Delete** /tenants/{tenant_id}/users/{user_id}/envs/{env_id}/roles/{role_name} | テナントのユーザーから役割(ロール)を削除(Remove Role From Tenant User)
-*TenantUserApi* | [**get_all_tenant_user**](docs/TenantUserApi.md#get_all_tenant_user) | **Get** /tenants/all/users/{user_id} | ユーザー情報を取得(Get User Info)
-*TenantUserApi* | [**get_all_tenant_users**](docs/TenantUserApi.md#get_all_tenant_users) | **Get** /tenants/all/users | ユーザー一覧を取得(Get Users)
-*TenantUserApi* | [**get_tenant_user**](docs/TenantUserApi.md#get_tenant_user) | **Get** /tenants/{tenant_id}/users/{user_id} | テナントのユーザー情報を取得(Get Tenant User)
-*TenantUserApi* | [**get_tenant_users**](docs/TenantUserApi.md#get_tenant_users) | **Get** /tenants/{tenant_id}/users | テナントのユーザー一覧を取得(Get Tenant Users)
-*TenantUserApi* | [**update_tenant_user**](docs/TenantUserApi.md#update_tenant_user) | **Patch** /tenants/{tenant_id}/users/{user_id} | テナントのユーザー属性情報を更新(Update Tenant User Attribute)
-*UserAttributeApi* | [**create_user_attribute**](docs/UserAttributeApi.md#create_user_attribute) | **Post** /user-attributes | ユーザー属性の作成(Create User Attributes)
-*UserAttributeApi* | [**delete_user_attribute**](docs/UserAttributeApi.md#delete_user_attribute) | **Delete** /user-attributes/{attribute_name} | ユーザー属性の削除(Delete User Attribute)
-*UserAttributeApi* | [**get_user_attributes**](docs/UserAttributeApi.md#get_user_attributes) | **Get** /user-attributes | ユーザー属性の一覧を取得(Get User Attributes)
-*UserInfoApi* | [**get_user_info**](docs/UserInfoApi.md#get_user_info) | **Get** /userinfo | ユーザー情報取得(Get User Info)
+*AuthInfoApi* | [**get_auth_info**](docs/AuthInfoApi.md#get_auth_info) | **Get** /auth-info | Get Authentication Info
+*AuthInfoApi* | [**get_identity_providers**](docs/AuthInfoApi.md#get_identity_providers) | **Get** /identity-providers | Get Sign-In Information Via External Provider
+*AuthInfoApi* | [**get_sign_in_settings**](docs/AuthInfoApi.md#get_sign_in_settings) | **Get** /sign-in-settings | Get Password Requirements
+*AuthInfoApi* | [**update_auth_info**](docs/AuthInfoApi.md#update_auth_info) | **Put** /auth-info | Update Authentication Info
+*AuthInfoApi* | [**update_identity_provider**](docs/AuthInfoApi.md#update_identity_provider) | **Put** /identity-providers | Update Sign-In Information
+*AuthInfoApi* | [**update_sign_in_settings**](docs/AuthInfoApi.md#update_sign_in_settings) | **Put** /sign-in-settings | Update Password Requirements
+*BasicInfoApi* | [**find_notification_messages**](docs/BasicInfoApi.md#find_notification_messages) | **Get** /notification-messages | Get Notification Email Templates
+*BasicInfoApi* | [**get_basic_info**](docs/BasicInfoApi.md#get_basic_info) | **Get** /basic-info | Get Basic Configurations
+*BasicInfoApi* | [**get_customize_page_settings**](docs/BasicInfoApi.md#get_customize_page_settings) | **Get** /customize-page-settings | Get Authentication Authorization Basic Information
+*BasicInfoApi* | [**get_customize_pages**](docs/BasicInfoApi.md#get_customize_pages) | **Get** /customize-pages | Get Authentication Page Setting
+*BasicInfoApi* | [**update_basic_info**](docs/BasicInfoApi.md#update_basic_info) | **Put** /basic-info | Update Basic Configurations
+*BasicInfoApi* | [**update_customize_page_settings**](docs/BasicInfoApi.md#update_customize_page_settings) | **Patch** /customize-page-settings | Update Authentication Authorization Basic Information
+*BasicInfoApi* | [**update_customize_pages**](docs/BasicInfoApi.md#update_customize_pages) | **Patch** /customize-pages | Authentication Page Setting
+*BasicInfoApi* | [**update_notification_messages**](docs/BasicInfoApi.md#update_notification_messages) | **Put** /notification-messages | Update Notification Email Template
+*CredentialApi* | [**create_auth_credentials**](docs/CredentialApi.md#create_auth_credentials) | **Post** /credentials | Save Authentication/Authorization Information
+*CredentialApi* | [**get_auth_credentials**](docs/CredentialApi.md#get_auth_credentials) | **Get** /credentials | Get Authentication/Authorization Information
+*EnvApi* | [**create_env**](docs/EnvApi.md#create_env) | **Post** /envs | Create Env Info
+*EnvApi* | [**delete_env**](docs/EnvApi.md#delete_env) | **Delete** /envs/{env_id} | Delete Env Info
+*EnvApi* | [**get_env**](docs/EnvApi.md#get_env) | **Get** /envs/{env_id} | Get Env Details
+*EnvApi* | [**get_envs**](docs/EnvApi.md#get_envs) | **Get** /envs | Get Env Info
+*EnvApi* | [**update_env**](docs/EnvApi.md#update_env) | **Patch** /envs/{env_id} | Update Env Info
+*ErrorApi* | [**return_internal_server_error**](docs/ErrorApi.md#return_internal_server_error) | **Get** /errors/internal-server-error | Return Internal Server Error
+*InvitationApi* | [**create_tenant_invitation**](docs/InvitationApi.md#create_tenant_invitation) | **Post** /tenants/{tenant_id}/invitations | Create Tenant Invitation
+*InvitationApi* | [**delete_tenant_invitation**](docs/InvitationApi.md#delete_tenant_invitation) | **Delete** /tenants/{tenant_id}/invitations/{invitation_id} | Delete Tenant Invitation
+*InvitationApi* | [**get_invitation_validity**](docs/InvitationApi.md#get_invitation_validity) | **Get** /invitations/{invitation_id}/validity | Get Invitation Validity
+*InvitationApi* | [**get_tenant_invitation**](docs/InvitationApi.md#get_tenant_invitation) | **Get** /tenants/{tenant_id}/invitations/{invitation_id} | Get Tenant Invitation
+*InvitationApi* | [**get_tenant_invitations**](docs/InvitationApi.md#get_tenant_invitations) | **Get** /tenants/{tenant_id}/invitations | Get Tenant Invitations
+*InvitationApi* | [**validate_invitation**](docs/InvitationApi.md#validate_invitation) | **Patch** /invitations/{invitation_id}/validate | Validate Invitation
+*RoleApi* | [**create_role**](docs/RoleApi.md#create_role) | **Post** /roles | Create Role
+*RoleApi* | [**delete_role**](docs/RoleApi.md#delete_role) | **Delete** /roles/{role_name} | Delete Role
+*RoleApi* | [**get_roles**](docs/RoleApi.md#get_roles) | **Get** /roles | Get Roles
+*SaasUserApi* | [**confirm_email_update**](docs/SaasUserApi.md#confirm_email_update) | **Post** /users/{user_id}/email/confirm | Confirm User Email Update
+*SaasUserApi* | [**confirm_external_user_link**](docs/SaasUserApi.md#confirm_external_user_link) | **Post** /external-users/confirm | Confirm External User Account Link
+*SaasUserApi* | [**confirm_sign_up_with_aws_marketplace**](docs/SaasUserApi.md#confirm_sign_up_with_aws_marketplace) | **Post** /aws-marketplace/sign-up-confirm | Confirm Sign Up with AWS Marketplace
+*SaasUserApi* | [**create_saas_user**](docs/SaasUserApi.md#create_saas_user) | **Post** /users | Create SaaS User
+*SaasUserApi* | [**create_secret_code**](docs/SaasUserApi.md#create_secret_code) | **Post** /users/{user_id}/mfa/software-token/secret-code | Create secret code for authentication application registration
+*SaasUserApi* | [**delete_saas_user**](docs/SaasUserApi.md#delete_saas_user) | **Delete** /users/{user_id} | Delete User
+*SaasUserApi* | [**get_saas_user**](docs/SaasUserApi.md#get_saas_user) | **Get** /users/{user_id} | Get User
+*SaasUserApi* | [**get_saas_users**](docs/SaasUserApi.md#get_saas_users) | **Get** /users | Get Users
+*SaasUserApi* | [**get_user_mfa_preference**](docs/SaasUserApi.md#get_user_mfa_preference) | **Get** /users/{user_id}/mfa/preference | Get User's MFA Settings
+*SaasUserApi* | [**link_aws_marketplace**](docs/SaasUserApi.md#link_aws_marketplace) | **Patch** /aws-marketplace/link | Link an existing tenant with AWS Marketplace
+*SaasUserApi* | [**request_email_update**](docs/SaasUserApi.md#request_email_update) | **Post** /users/{user_id}/email/request | Request User Email Update
+*SaasUserApi* | [**request_external_user_link**](docs/SaasUserApi.md#request_external_user_link) | **Post** /external-users/request | Request External User Account Link
+*SaasUserApi* | [**resend_sign_up_confirmation_email**](docs/SaasUserApi.md#resend_sign_up_confirmation_email) | **Post** /sign-up/resend | Resend Sign Up Confirmation Email
+*SaasUserApi* | [**sign_up**](docs/SaasUserApi.md#sign_up) | **Post** /sign-up | Sign Up
+*SaasUserApi* | [**sign_up_with_aws_marketplace**](docs/SaasUserApi.md#sign_up_with_aws_marketplace) | **Post** /aws-marketplace/sign-up | Sign Up with AWS Marketplace
+*SaasUserApi* | [**unlink_provider**](docs/SaasUserApi.md#unlink_provider) | **Delete** /users/{user_id}/providers/{provider_name} | Unlink external identity providers
+*SaasUserApi* | [**update_saas_user_attributes**](docs/SaasUserApi.md#update_saas_user_attributes) | **Patch** /users/{user_id}/attributes | Update SaaS User Attributes
+*SaasUserApi* | [**update_saas_user_email**](docs/SaasUserApi.md#update_saas_user_email) | **Patch** /users/{user_id}/email | Change Email
+*SaasUserApi* | [**update_saas_user_password**](docs/SaasUserApi.md#update_saas_user_password) | **Patch** /users/{user_id}/password | Change Password
+*SaasUserApi* | [**update_software_token**](docs/SaasUserApi.md#update_software_token) | **Put** /users/{user_id}/mfa/software-token | Register Authentication Application
+*SaasUserApi* | [**update_user_mfa_preference**](docs/SaasUserApi.md#update_user_mfa_preference) | **Patch** /users/{user_id}/mfa/preference | Update User's MFA Settings
+*SingleTenantApi* | [**get_cloud_formation_launch_stack_link_for_single_tenant**](docs/SingleTenantApi.md#get_cloud_formation_launch_stack_link_for_single_tenant) | **Get** /single-tenant/cloudformation-launch-stack-link | Get CloudFormation Stack Launch Link For Single Tenant
+*SingleTenantApi* | [**get_single_tenant_settings**](docs/SingleTenantApi.md#get_single_tenant_settings) | **Get** /single-tenant/settings | Retrieve the settings of the single tenant.
+*SingleTenantApi* | [**update_single_tenant_settings**](docs/SingleTenantApi.md#update_single_tenant_settings) | **Patch** /single-tenant/settings | Update configuration information for single-tenant functionality
+*TenantApi* | [**create_tenant**](docs/TenantApi.md#create_tenant) | **Post** /tenants | Create Tenant
+*TenantApi* | [**create_tenant_and_pricing**](docs/TenantApi.md#create_tenant_and_pricing) | **Patch** /stripe/init | Stripe Initial Setting
+*TenantApi* | [**delete_stripe_tenant_and_pricing**](docs/TenantApi.md#delete_stripe_tenant_and_pricing) | **Delete** /stripe | Delete Customer and Product From Stripe
+*TenantApi* | [**delete_tenant**](docs/TenantApi.md#delete_tenant) | **Delete** /tenants/{tenant_id} | Delete Tenant
+*TenantApi* | [**get_stripe_customer**](docs/TenantApi.md#get_stripe_customer) | **Get** /tenants/{tenant_id}/stripe-customer | Get Stripe Customer
+*TenantApi* | [**get_tenant**](docs/TenantApi.md#get_tenant) | **Get** /tenants/{tenant_id} | Get Tenant Details
+*TenantApi* | [**get_tenant_identity_providers**](docs/TenantApi.md#get_tenant_identity_providers) | **Get** /tenants/{tenant_id}/identity-providers | Get identity provider per tenant
+*TenantApi* | [**get_tenants**](docs/TenantApi.md#get_tenants) | **Get** /tenants | Get Tenants
+*TenantApi* | [**reset_plan**](docs/TenantApi.md#reset_plan) | **Put** /plans/reset | Delete all information related to rate plans
+*TenantApi* | [**update_tenant**](docs/TenantApi.md#update_tenant) | **Patch** /tenants/{tenant_id} | Update Tenant Details
+*TenantApi* | [**update_tenant_billing_info**](docs/TenantApi.md#update_tenant_billing_info) | **Put** /tenants/{tenant_id}/billing-info | Update Tenant Billing Information
+*TenantApi* | [**update_tenant_identity_provider**](docs/TenantApi.md#update_tenant_identity_provider) | **Put** /tenants/{tenant_id}/identity-providers | Update identity provider per tenant
+*TenantApi* | [**update_tenant_plan**](docs/TenantApi.md#update_tenant_plan) | **Put** /tenants/{tenant_id}/plans | Update Tenant Plan Information
+*TenantAttributeApi* | [**create_tenant_attribute**](docs/TenantAttributeApi.md#create_tenant_attribute) | **Post** /tenant-attributes | Create Tenant Attribute
+*TenantAttributeApi* | [**delete_tenant_attribute**](docs/TenantAttributeApi.md#delete_tenant_attribute) | **Delete** /tenant-attributes/{attribute_name} | Delete Tenant Attribute
+*TenantAttributeApi* | [**get_tenant_attributes**](docs/TenantAttributeApi.md#get_tenant_attributes) | **Get** /tenant-attributes | Get Tenant Attributes
+*TenantUserApi* | [**create_tenant_user**](docs/TenantUserApi.md#create_tenant_user) | **Post** /tenants/{tenant_id}/users | Create Tenant User
+*TenantUserApi* | [**create_tenant_user_roles**](docs/TenantUserApi.md#create_tenant_user_roles) | **Post** /tenants/{tenant_id}/users/{user_id}/envs/{env_id}/roles | Create Tenant User Role
+*TenantUserApi* | [**delete_tenant_user**](docs/TenantUserApi.md#delete_tenant_user) | **Delete** /tenants/{tenant_id}/users/{user_id} | Delete Tenant User
+*TenantUserApi* | [**delete_tenant_user_role**](docs/TenantUserApi.md#delete_tenant_user_role) | **Delete** /tenants/{tenant_id}/users/{user_id}/envs/{env_id}/roles/{role_name} | Remove Role From Tenant User
+*TenantUserApi* | [**get_all_tenant_user**](docs/TenantUserApi.md#get_all_tenant_user) | **Get** /tenants/all/users/{user_id} | Get User Info
+*TenantUserApi* | [**get_all_tenant_users**](docs/TenantUserApi.md#get_all_tenant_users) | **Get** /tenants/all/users | Get Users
+*TenantUserApi* | [**get_tenant_user**](docs/TenantUserApi.md#get_tenant_user) | **Get** /tenants/{tenant_id}/users/{user_id} | Get Tenant User
+*TenantUserApi* | [**get_tenant_users**](docs/TenantUserApi.md#get_tenant_users) | **Get** /tenants/{tenant_id}/users | Get Tenant Users
+*TenantUserApi* | [**update_tenant_user**](docs/TenantUserApi.md#update_tenant_user) | **Patch** /tenants/{tenant_id}/users/{user_id} | Update Tenant User Attribute
+*UserAttributeApi* | [**create_saas_user_attribute**](docs/UserAttributeApi.md#create_saas_user_attribute) | **Post** /saas-user-attributes | Create SaaS User Attributes
+*UserAttributeApi* | [**create_user_attribute**](docs/UserAttributeApi.md#create_user_attribute) | **Post** /user-attributes | Create User Attributes
+*UserAttributeApi* | [**delete_user_attribute**](docs/UserAttributeApi.md#delete_user_attribute) | **Delete** /user-attributes/{attribute_name} | Delete User Attribute
+*UserAttributeApi* | [**get_user_attributes**](docs/UserAttributeApi.md#get_user_attributes) | **Get** /user-attributes | Get User Attributes
+*UserInfoApi* | [**get_user_info**](docs/UserInfoApi.md#get_user_info) | **Get** /userinfo | Get User Info
+*UserInfoApi* | [**get_user_info_by_email**](docs/UserInfoApi.md#get_user_info_by_email) | **Get** /userinfo/search/email | Get User Info by Email
 
 
 ## Documentation For Models
@@ -118,6 +125,7 @@ Class | Method | HTTP request | Description
  - [BillingAddress](docs/BillingAddress.md)
  - [BillingInfo](docs/BillingInfo.md)
  - [ClientSecret](docs/ClientSecret.md)
+ - [CloudFormationLaunchStackLink](docs/CloudFormationLaunchStackLink.md)
  - [ConfirmEmailUpdateParam](docs/ConfirmEmailUpdateParam.md)
  - [ConfirmExternalUserLinkParam](docs/ConfirmExternalUserLinkParam.md)
  - [ConfirmSignUpWithAwsMarketplaceParam](docs/ConfirmSignUpWithAwsMarketplaceParam.md)
@@ -171,7 +179,9 @@ Class | Method | HTTP request | Description
  - [SignInSettings](docs/SignInSettings.md)
  - [SignUpParam](docs/SignUpParam.md)
  - [SignUpWithAwsMarketplaceParam](docs/SignUpWithAwsMarketplaceParam.md)
+ - [SingleTenantSettings](docs/SingleTenantSettings.md)
  - [SoftwareTokenSecretCode](docs/SoftwareTokenSecretCode.md)
+ - [StripeCustomer](docs/StripeCustomer.md)
  - [Tenant](docs/Tenant.md)
  - [TenantAttributes](docs/TenantAttributes.md)
  - [TenantDetail](docs/TenantDetail.md)
@@ -186,9 +196,11 @@ Class | Method | HTTP request | Description
  - [UpdateEnvParam](docs/UpdateEnvParam.md)
  - [UpdateIdentityProviderParam](docs/UpdateIdentityProviderParam.md)
  - [UpdateNotificationMessagesParam](docs/UpdateNotificationMessagesParam.md)
+ - [UpdateSaasUserAttributesParam](docs/UpdateSaasUserAttributesParam.md)
  - [UpdateSaasUserEmailParam](docs/UpdateSaasUserEmailParam.md)
  - [UpdateSaasUserPasswordParam](docs/UpdateSaasUserPasswordParam.md)
  - [UpdateSignInSettingsParam](docs/UpdateSignInSettingsParam.md)
+ - [UpdateSingleTenantSettingsParam](docs/UpdateSingleTenantSettingsParam.md)
  - [UpdateSoftwareTokenParam](docs/UpdateSoftwareTokenParam.md)
  - [UpdateTenantIdentityProviderParam](docs/UpdateTenantIdentityProviderParam.md)
  - [UpdateTenantUserParam](docs/UpdateTenantUserParam.md)

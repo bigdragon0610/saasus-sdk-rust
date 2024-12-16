@@ -13,16 +13,16 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct PricingTier {
-    /// 上限(upper limit)
+    /// Upper limit
     #[serde(rename = "up_to")]
     pub up_to: i32,
-    /// 単位金額(amount per unit)
+    /// Amount per unit
     #[serde(rename = "unit_amount")]
     pub unit_amount: i32,
-    /// 固定金額(fixed Amount)
+    /// Fixed amount
     #[serde(rename = "flat_amount")]
     pub flat_amount: i32,
-    /// inf
+    /// Indefinite
     #[serde(rename = "inf")]
     pub inf: bool,
 }

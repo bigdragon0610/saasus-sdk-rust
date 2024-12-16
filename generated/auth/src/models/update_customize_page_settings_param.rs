@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,22 +13,22 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct UpdateCustomizePageSettingsParam {
-    /// サービス名(service name)
+    /// service name
     #[serde(rename = "title")]
     pub title: String,
-    /// 利用規約URL(terms of service URL)
+    /// terms of service URL
     #[serde(rename = "terms_of_service_url")]
     pub terms_of_service_url: String,
-    /// プライバシーポリシーURL(privacy policy URL)
+    /// privacy policy URL
     #[serde(rename = "privacy_policy_url")]
     pub privacy_policy_url: String,
-    /// Google Tag Manager コンテナ ID(Google Tag Manager container ID)
+    /// Google Tag Manager container ID
     #[serde(rename = "google_tag_manager_container_id")]
     pub google_tag_manager_container_id: String,
-    /// サービスアイコン(service icon)
+    /// service icon
     #[serde(rename = "icon")]
     pub icon: String,
-    /// ファビコン(favicon)
+    /// favicon
     #[serde(rename = "favicon")]
     pub favicon: String,
 }

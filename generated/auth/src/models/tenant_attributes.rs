@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,7 +13,7 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct TenantAttributes {
-    /// テナント属性定義(Tenant Attribute Definition)
+    /// Tenant Attribute Definition
     #[serde(rename = "tenant_attributes")]
     pub tenant_attributes: Vec<crate::models::Attribute>,
 }

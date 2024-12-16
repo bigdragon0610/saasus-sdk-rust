@@ -12,6 +12,7 @@ docs/BasicInfoApi.md
 docs/BillingAddress.md
 docs/BillingInfo.md
 docs/ClientSecret.md
+docs/CloudFormationLaunchStackLink.md
 docs/ConfirmEmailUpdateParam.md
 docs/ConfirmExternalUserLinkParam.md
 docs/ConfirmSignUpWithAwsMarketplaceParam.md
@@ -71,7 +72,10 @@ docs/SelfRegist.md
 docs/SignInSettings.md
 docs/SignUpParam.md
 docs/SignUpWithAwsMarketplaceParam.md
+docs/SingleTenantApi.md
+docs/SingleTenantSettings.md
 docs/SoftwareTokenSecretCode.md
+docs/StripeCustomer.md
 docs/Tenant.md
 docs/TenantApi.md
 docs/TenantAttributeApi.md
@@ -89,9 +93,11 @@ docs/UpdateCustomizePagesParam.md
 docs/UpdateEnvParam.md
 docs/UpdateIdentityProviderParam.md
 docs/UpdateNotificationMessagesParam.md
+docs/UpdateSaasUserAttributesParam.md
 docs/UpdateSaasUserEmailParam.md
 docs/UpdateSaasUserPasswordParam.md
 docs/UpdateSignInSettingsParam.md
+docs/UpdateSingleTenantSettingsParam.md
 docs/UpdateSoftwareTokenParam.md
 docs/UpdateTenantIdentityProviderParam.md
 docs/UpdateTenantUserParam.md
@@ -115,13 +121,13 @@ src/apis/invitation_api.rs
 src/apis/mod.rs
 src/apis/role_api.rs
 src/apis/saas_user_api.rs
+src/apis/single_tenant_api.rs
 src/apis/tenant_api.rs
 src/apis/tenant_attribute_api.rs
 src/apis/tenant_user_api.rs
 src/apis/user_attribute_api.rs
 src/apis/user_info_api.rs
 src/lib.rs
-src/models/______________invited_user_environment_information__inner.rs
 src/models/account_verification.rs
 src/models/api_keys.rs
 src/models/attribute.rs
@@ -132,6 +138,7 @@ src/models/basic_info.rs
 src/models/billing_address.rs
 src/models/billing_info.rs
 src/models/client_secret.rs
+src/models/cloud_formation_launch_stack_link.rs
 src/models/confirm_email_update_param.rs
 src/models/confirm_external_user_link_param.rs
 src/models/confirm_sign_up_with_aws_marketplace_param.rs
@@ -158,6 +165,7 @@ src/models/invitation.rs
 src/models/invitation_status.rs
 src/models/invitation_validity.rs
 src/models/invitations.rs
+src/models/invited_user_environment_information_inner.rs
 src/models/invoice_language.rs
 src/models/link_aws_marketplace_param.rs
 src/models/message_template.rs
@@ -185,7 +193,9 @@ src/models/self_regist.rs
 src/models/sign_in_settings.rs
 src/models/sign_up_param.rs
 src/models/sign_up_with_aws_marketplace_param.rs
+src/models/single_tenant_settings.rs
 src/models/software_token_secret_code.rs
+src/models/stripe_customer.rs
 src/models/tenant.rs
 src/models/tenant_attributes.rs
 src/models/tenant_detail.rs
@@ -200,9 +210,11 @@ src/models/update_customize_pages_param.rs
 src/models/update_env_param.rs
 src/models/update_identity_provider_param.rs
 src/models/update_notification_messages_param.rs
+src/models/update_saas_user_attributes_param.rs
 src/models/update_saas_user_email_param.rs
 src/models/update_saas_user_password_param.rs
 src/models/update_sign_in_settings_param.rs
+src/models/update_single_tenant_settings_param.rs
 src/models/update_software_token_param.rs
 src/models/update_tenant_identity_provider_param.rs
 src/models/update_tenant_user_param.rs

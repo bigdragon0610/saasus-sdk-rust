@@ -13,7 +13,7 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct UpdateStripeInfoParam {
-    /// シークレットキー(secret key)
+    /// secret key
     #[serde(rename = "secret_key")]
     pub secret_key: String,
 }

@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -15,19 +15,23 @@
 pub struct UserInfo {
     #[serde(rename = "id")]
     pub id: String,
-    /// メールアドレス(E-mail)
+    /// E-mail
     #[serde(rename = "email")]
     pub email: String,
-    /// テナント情報(Tenant Info)
+    /// user additional attributes
+    #[serde(rename = "user_attribute")]
+    pub user_attribute: ::std::collections::HashMap<String, serde_json::Value>,
+    /// Tenant Info
     #[serde(rename = "tenants")]
     pub tenants: Vec<crate::models::UserAvailableTenant>,
 }
 
 impl UserInfo {
-    pub fn new(id: String, email: String, tenants: Vec<crate::models::UserAvailableTenant>) -> UserInfo {
+    pub fn new(id: String, email: String, user_attribute: ::std::collections::HashMap<String, serde_json::Value>, tenants: Vec<crate::models::UserAvailableTenant>) -> UserInfo {
         UserInfo {
             id,
             email,
+            user_attribute,
             tenants,
         }
     }

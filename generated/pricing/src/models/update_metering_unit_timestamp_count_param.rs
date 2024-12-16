@@ -15,7 +15,7 @@
 pub struct UpdateMeteringUnitTimestampCountParam {
     #[serde(rename = "method")]
     pub method: crate::models::UpdateMeteringUnitTimestampCountMethod,
-    /// 件数(count)
+    /// Count
     #[serde(rename = "count")]
     pub count: i32,
 }

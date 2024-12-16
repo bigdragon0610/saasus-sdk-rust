@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -51,6 +51,7 @@ pub trait SaasUserApi {
     fn sign_up(&self, sign_up_param: Option<crate::models::SignUpParam>) -> Pin<Box<dyn Future<Output = Result<crate::models::SaasUser, Error>>>>;
     fn sign_up_with_aws_marketplace(&self, sign_up_with_aws_marketplace_param: Option<crate::models::SignUpWithAwsMarketplaceParam>) -> Pin<Box<dyn Future<Output = Result<crate::models::SaasUser, Error>>>>;
     fn unlink_provider(&self, provider_name: &str, user_id: &str) -> Pin<Box<dyn Future<Output = Result<(), Error>>>>;
+    fn update_saas_user_attributes(&self, user_id: &str, update_saas_user_attributes_param: Option<crate::models::UpdateSaasUserAttributesParam>) -> Pin<Box<dyn Future<Output = Result<(), Error>>>>;
     fn update_saas_user_email(&self, user_id: &str, update_saas_user_email_param: Option<crate::models::UpdateSaasUserEmailParam>) -> Pin<Box<dyn Future<Output = Result<(), Error>>>>;
     fn update_saas_user_password(&self, user_id: &str, update_saas_user_password_param: Option<crate::models::UpdateSaasUserPasswordParam>) -> Pin<Box<dyn Future<Output = Result<(), Error>>>>;
     fn update_software_token(&self, user_id: &str, update_software_token_param: Option<crate::models::UpdateSoftwareTokenParam>) -> Pin<Box<dyn Future<Output = Result<(), Error>>>>;
@@ -209,6 +210,17 @@ impl<C: hyper::client::connect::Connect>SaasUserApi for SaasUserApiClient<C>
         ;
         req = req.with_path_param("provider_name".to_string(), provider_name.to_string());
         req = req.with_path_param("user_id".to_string(), user_id.to_string());
+        req = req.returns_nothing();
+
+        req.execute(self.configuration.borrow())
+    }
+
+    #[allow(unused_mut)]
+    fn update_saas_user_attributes(&self, user_id: &str, update_saas_user_attributes_param: Option<crate::models::UpdateSaasUserAttributesParam>) -> Pin<Box<dyn Future<Output = Result<(), Error>>>> {
+        let mut req = __internal_request::Request::new(hyper::Method::PATCH, "/users/{user_id}/attributes".to_string())
+        ;
+        req = req.with_path_param("user_id".to_string(), user_id.to_string());
+        req = req.with_body_param(update_saas_user_attributes_param);
         req = req.returns_nothing();
 
         req.execute(self.configuration.borrow())

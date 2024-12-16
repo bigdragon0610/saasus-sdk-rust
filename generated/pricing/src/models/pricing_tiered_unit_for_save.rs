@@ -13,13 +13,13 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct PricingTieredUnitForSave {
-    /// 名前(name)
+    /// Name
     #[serde(rename = "name")]
     pub name: String,
-    /// 表示名(display name)
+    /// Display Name
     #[serde(rename = "display_name")]
     pub display_name: String,
-    /// 説明(description)
+    /// Description
     #[serde(rename = "description")]
     pub description: String,
     #[serde(rename = "type")]
@@ -28,9 +28,10 @@ pub struct PricingTieredUnitForSave {
     pub currency: crate::models::Currency,
     #[serde(rename = "tiers")]
     pub tiers: Vec<crate::models::PricingTier>,
-    /// 上限値(upper limit)
+    /// Upper limit
     #[serde(rename = "upper_count")]
     pub upper_count: i32,
+    /// Metering unit name
     #[serde(rename = "metering_unit_name")]
     pub metering_unit_name: String,
     #[serde(rename = "aggregate_usage", skip_serializing_if = "Option::is_none")]

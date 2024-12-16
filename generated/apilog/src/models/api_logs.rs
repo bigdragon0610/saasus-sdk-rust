@@ -15,12 +15,16 @@
 pub struct ApiLogs {
     #[serde(rename = "api_logs")]
     pub api_logs: Vec<crate::models::ApiLog>,
+    /// Cursor for cursor pagination
+    #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
+    pub cursor: Option<String>,
 }
 
 impl ApiLogs {
     pub fn new(api_logs: Vec<crate::models::ApiLog>) -> ApiLogs {
         ApiLogs {
             api_logs,
+            cursor: None,
         }
     }
 }

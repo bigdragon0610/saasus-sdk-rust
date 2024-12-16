@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -39,6 +39,7 @@ pub trait TenantApi {
     fn create_tenant_and_pricing(&self, ) -> Pin<Box<dyn Future<Output = Result<(), Error>>>>;
     fn delete_stripe_tenant_and_pricing(&self, ) -> Pin<Box<dyn Future<Output = Result<(), Error>>>>;
     fn delete_tenant(&self, tenant_id: &str) -> Pin<Box<dyn Future<Output = Result<(), Error>>>>;
+    fn get_stripe_customer(&self, tenant_id: &str) -> Pin<Box<dyn Future<Output = Result<crate::models::StripeCustomer, Error>>>>;
     fn get_tenant(&self, tenant_id: &str) -> Pin<Box<dyn Future<Output = Result<crate::models::TenantDetail, Error>>>>;
     fn get_tenant_identity_providers(&self, tenant_id: &str) -> Pin<Box<dyn Future<Output = Result<crate::models::TenantIdentityProviders, Error>>>>;
     fn get_tenants(&self, ) -> Pin<Box<dyn Future<Output = Result<crate::models::Tenants, Error>>>>;
@@ -84,6 +85,15 @@ impl<C: hyper::client::connect::Connect>TenantApi for TenantApiClient<C>
         ;
         req = req.with_path_param("tenant_id".to_string(), tenant_id.to_string());
         req = req.returns_nothing();
+
+        req.execute(self.configuration.borrow())
+    }
+
+    #[allow(unused_mut)]
+    fn get_stripe_customer(&self, tenant_id: &str) -> Pin<Box<dyn Future<Output = Result<crate::models::StripeCustomer, Error>>>> {
+        let mut req = __internal_request::Request::new(hyper::Method::GET, "/tenants/{tenant_id}/stripe-customer".to_string())
+        ;
+        req = req.with_path_param("tenant_id".to_string(), tenant_id.to_string());
 
         req.execute(self.configuration.borrow())
     }

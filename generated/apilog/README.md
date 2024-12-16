@@ -25,9 +25,9 @@ All URIs are relative to *https://api.saasus.io/v1/apilog*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ApiLogApi* | [**get_log**](docs/ApiLogApi.md#get_log) | **Get** /logs/{api_log_id} | API実行ログ取得
-*ApiLogApi* | [**get_logs**](docs/ApiLogApi.md#get_logs) | **Get** /logs | API実行ログ取得
-*ErrorApi* | [**return_internal_server_error**](docs/ErrorApi.md#return_internal_server_error) | **Get** /errors/internal-server-error | ステータスコード500でサーバーエラーを返却(Return Internal Server Error)
+*ApiLogApi* | [**get_log**](docs/ApiLogApi.md#get_log) | **Get** /logs/{api_log_id} | Get API execution log
+*ApiLogApi* | [**get_logs**](docs/ApiLogApi.md#get_logs) | **Get** /logs | Get API execution log list
+*ErrorApi* | [**return_internal_server_error**](docs/ErrorApi.md#return_internal_server_error) | **Get** /errors/internal-server-error | Returns a server error with status code 500
 
 
 ## Documentation For Models

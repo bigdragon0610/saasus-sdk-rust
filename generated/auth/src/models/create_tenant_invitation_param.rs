@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,10 +13,10 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct CreateTenantInvitationParam {
-    /// 招待するユーザーのメールアドレス(email address of the user to be invited)
+    /// Email address of the user to be invited
     #[serde(rename = "email")]
     pub email: String,
-    /// 招待を作成するユーザーのアクセストークン(access token of the user who creates an invitation)
+    /// Access token of the user who creates an invitation
     #[serde(rename = "access_token")]
     pub access_token: String,
     #[serde(rename = "envs")]

@@ -13,20 +13,21 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct PricingMenu {
-    /// メニュー名(menu name)
+    /// Menu name
     #[serde(rename = "name")]
     pub name: String,
-    /// メニュー表示名(menu display name)
+    /// Menu display name
     #[serde(rename = "display_name")]
     pub display_name: String,
-    /// メニュー説明(menu description)
+    /// Menu description
     #[serde(rename = "description")]
     pub description: String,
-    /// メニューの使用済み設定(menu used settings)
+    /// Menu used settings
     #[serde(rename = "used")]
     pub used: bool,
     #[serde(rename = "units")]
     pub units: Vec<crate::models::PricingUnit>,
+    /// Universally Unique Identifier
     #[serde(rename = "id")]
     pub id: String,
 }

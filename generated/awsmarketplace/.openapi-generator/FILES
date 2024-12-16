@@ -1,5 +1,4 @@
 .gitignore
-Cargo.toml
 README.md
 docs/AwsMarketplaceApi.md
 docs/CatalogEntityVisibility.md

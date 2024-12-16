@@ -13,13 +13,13 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct EventMessage {
-    /// イベントタイプ(event type)
+    /// event type
     #[serde(rename = "event_type")]
     pub event_type: String,
-    /// 詳細イベントタイプ(detailed event type)
+    /// detailed event type
     #[serde(rename = "event_detail_type")]
     pub event_detail_type: String,
-    /// イベントメッセージ(event message)
+    /// event message
     #[serde(rename = "message")]
     pub message: String,
 }

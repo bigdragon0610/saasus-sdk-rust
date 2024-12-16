@@ -36,7 +36,7 @@ impl<C: hyper::client::connect::Connect> ApiLogApiClient<C>
 
 pub trait ApiLogApi {
     fn get_log(&self, api_log_id: &str) -> Pin<Box<dyn Future<Output = Result<crate::models::ApiLog, Error>>>>;
-    fn get_logs(&self, ) -> Pin<Box<dyn Future<Output = Result<crate::models::ApiLogs, Error>>>>;
+    fn get_logs(&self, created_date: Option<String>, created_at: Option<String>, limit: Option<i64>, cursor: Option<&str>) -> Pin<Box<dyn Future<Output = Result<crate::models::ApiLogs, Error>>>>;
 }
 
 impl<C: hyper::client::connect::Connect>ApiLogApi for ApiLogApiClient<C>
@@ -51,9 +51,25 @@ impl<C: hyper::client::connect::Connect>ApiLogApi for ApiLogApiClient<C>
     }
 
     #[allow(unused_mut)]
-    fn get_logs(&self, ) -> Pin<Box<dyn Future<Output = Result<crate::models::ApiLogs, Error>>>> {
+    fn get_logs(&self, created_date: Option<String>, created_at: Option<String>, limit: Option<i64>, cursor: Option<&str>) -> Pin<Box<dyn Future<Output = Result<crate::models::ApiLogs, Error>>>> {
         let mut req = __internal_request::Request::new(hyper::Method::GET, "/logs".to_string())
         ;
+        if let Some(ref s) = created_date {
+            let query_value = s.to_string();
+            req = req.with_query_param("created_date".to_string(), query_value);
+        }
+        if let Some(ref s) = created_at {
+            let query_value = s.to_string();
+            req = req.with_query_param("created_at".to_string(), query_value);
+        }
+        if let Some(ref s) = limit {
+            let query_value = s.to_string();
+            req = req.with_query_param("limit".to_string(), query_value);
+        }
+        if let Some(ref s) = cursor {
+            let query_value = s.to_string();
+            req = req.with_query_param("cursor".to_string(), query_value);
+        }
 
         req.execute(self.configuration.borrow())
     }

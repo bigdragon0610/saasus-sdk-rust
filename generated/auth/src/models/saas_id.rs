@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -17,7 +17,7 @@ pub struct SaasId {
     pub tenant_id: String,
     #[serde(rename = "env_id")]
     pub env_id: i32,
-    /// saas id
+    /// SaaS ID
     #[serde(rename = "saas_id")]
     pub saas_id: String,
 }

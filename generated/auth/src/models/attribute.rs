@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,10 +13,10 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Attribute {
-    /// 属性名(attribute name)
+    /// Attribute Name
     #[serde(rename = "attribute_name")]
     pub attribute_name: String,
-    /// 表示名(display name)
+    /// Display Name
     #[serde(rename = "display_name")]
     pub display_name: String,
     #[serde(rename = "attribute_type")]

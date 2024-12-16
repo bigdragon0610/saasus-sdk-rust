@@ -13,10 +13,10 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct UpdateTaxRateParam {
-    /// 表示名(display name)
+    /// Display name
     #[serde(rename = "display_name")]
     pub display_name: String,
-    /// 説明(description)
+    /// Description
     #[serde(rename = "description")]
     pub description: String,
 }

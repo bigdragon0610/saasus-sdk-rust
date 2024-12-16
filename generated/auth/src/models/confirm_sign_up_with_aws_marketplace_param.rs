@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,10 +13,10 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct ConfirmSignUpWithAwsMarketplaceParam {
-    /// テナント名(tenant name)
+    /// Tenant name
     #[serde(rename = "tenant_name", skip_serializing_if = "Option::is_none")]
     pub tenant_name: Option<String>,
-    /// アクセストークン(access token)
+    /// Access token
     #[serde(rename = "access_token")]
     pub access_token: String,
     /// Registration Token

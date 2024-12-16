@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -15,15 +15,15 @@
 pub struct Invitation {
     #[serde(rename = "id")]
     pub id: String,
-    /// 招待されたユーザーのメールアドレス(email address of the invited user)
+    /// Email address of the invited user
     #[serde(rename = "email")]
     pub email: String,
-    /// 招待URL(invitation URL)
+    /// Invitation URL
     #[serde(rename = "invitation_url")]
     pub invitation_url: String,
     #[serde(rename = "envs")]
     pub envs: Vec<crate::models::UserAvailableEnv>,
-    /// 招待の有効期限(expiration date of the invitation)
+    /// Expiration date of the invitation
     #[serde(rename = "expired_at")]
     pub expired_at: i32,
     #[serde(rename = "status")]

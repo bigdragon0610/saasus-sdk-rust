@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,18 +13,18 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct User {
-    /// ユーザーID(User ID)
+    /// User ID
     #[serde(rename = "id")]
     pub id: String,
     #[serde(rename = "tenant_id")]
     pub tenant_id: String,
-    /// テナント名(Tenant Name)
+    /// Tenant Name
     #[serde(rename = "tenant_name")]
     pub tenant_name: String,
-    /// メールアドレス(E-mail)
+    /// E-mail
     #[serde(rename = "email")]
     pub email: String,
-    /// 属性情報（SaaS 開発コンソールでユーザー属性定義を行い設定された情報を取得します）  Attribute information (Get information set by defining user attributes in the SaaS development console) 
+    /// Attribute information (Get information set by defining user attributes in the SaaS development console) 
     #[serde(rename = "attributes")]
     pub attributes: ::std::collections::HashMap<String, serde_json::Value>,
     #[serde(rename = "envs")]

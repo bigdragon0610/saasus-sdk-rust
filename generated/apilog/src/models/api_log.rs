@@ -13,44 +13,44 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct ApiLog {
-    /// トレースID
+    /// Trace ID
     #[serde(rename = "trace_id")]
     pub trace_id: String,
     #[serde(rename = "api_log_id")]
     pub api_log_id: String,
-    /// APIログ登録日時のエポック秒
+    /// Epoch second of API log registration timestamp
     #[serde(rename = "created_at")]
     pub created_at: i32,
-    /// APIログ登録日
+    /// API log registration date
     #[serde(rename = "created_date")]
     pub created_date: String,
-    /// APIログ削除予定エポック秒
+    /// Epoch second of planned API log deletion
     #[serde(rename = "ttl")]
     pub ttl: i32,
-    /// リクエストメソッド
+    /// Request method
     #[serde(rename = "request_method")]
     pub request_method: String,
     #[serde(rename = "saas_id")]
     pub saas_id: String,
-    /// APIキー
+    /// API Key
     #[serde(rename = "api_key")]
     pub api_key: String,
-    /// レスポンスステータス
+    /// Response status
     #[serde(rename = "response_status")]
     pub response_status: String,
-    /// リクエストURI
+    /// Request URI
     #[serde(rename = "request_uri")]
     pub request_uri: String,
-    /// クライアントIPアドレス
+    /// Client IP Address
     #[serde(rename = "remote_address")]
     pub remote_address: String,
-    /// リクエストリファラー
+    /// The referrer of the request
     #[serde(rename = "referer")]
     pub referer: String,
-    /// リクエストボディー
+    /// The body of the request
     #[serde(rename = "request_body")]
     pub request_body: String,
-    /// レスポンスボディー
+    /// The body of the response
     #[serde(rename = "response_body")]
     pub response_body: String,
 }

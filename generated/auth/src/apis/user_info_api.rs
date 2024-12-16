@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -36,6 +36,7 @@ impl<C: hyper::client::connect::Connect> UserInfoApiClient<C>
 
 pub trait UserInfoApi {
     fn get_user_info(&self, token: &str) -> Pin<Box<dyn Future<Output = Result<crate::models::UserInfo, Error>>>>;
+    fn get_user_info_by_email(&self, email: &str) -> Pin<Box<dyn Future<Output = Result<crate::models::UserInfo, Error>>>>;
 }
 
 impl<C: hyper::client::connect::Connect>UserInfoApi for UserInfoApiClient<C>
@@ -45,6 +46,15 @@ impl<C: hyper::client::connect::Connect>UserInfoApi for UserInfoApiClient<C>
         let mut req = __internal_request::Request::new(hyper::Method::GET, "/userinfo".to_string())
         ;
         req = req.with_query_param("token".to_string(), token.to_string());
+
+        req.execute(self.configuration.borrow())
+    }
+
+    #[allow(unused_mut)]
+    fn get_user_info_by_email(&self, email: &str) -> Pin<Box<dyn Future<Output = Result<crate::models::UserInfo, Error>>>> {
+        let mut req = __internal_request::Request::new(hyper::Method::GET, "/userinfo/search/email".to_string())
+        ;
+        req = req.with_query_param("email".to_string(), email.to_string());
 
         req.execute(self.configuration.borrow())
     }

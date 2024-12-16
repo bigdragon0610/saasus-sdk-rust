@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** | 請求用のテナント名  Tenant name for billing  | 
+**name** | **String** | Tenant name for billing | 
 **address** | [**crate::models::BillingAddress**](BillingAddress.md) |  | 
 **invoice_language** | [**crate::models::InvoiceLanguage**](InvoiceLanguage.md) |  | 
 

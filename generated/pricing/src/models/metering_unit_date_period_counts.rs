@@ -13,7 +13,7 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct MeteringUnitDatePeriodCounts {
-    /// 計測ユニット名(metering unit name)
+    /// Metering unit name
     #[serde(rename = "metering_unit_name")]
     pub metering_unit_name: String,
     #[serde(rename = "counts")]

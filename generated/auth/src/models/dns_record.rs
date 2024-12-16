@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,19 +13,19 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct DnsRecord {
-    /// CNAMEリソースレコード(CNAME Resource Record)
+    /// CNAME Resource Record
     #[serde(rename = "type")]
-    pub r#type: Type,
-    /// レコード名(Record Name)
+    pub r#type: TypeEnum,
+    /// Record Name
     #[serde(rename = "name")]
     pub name: String,
-    /// 値(Value)
+    /// Value
     #[serde(rename = "value")]
     pub value: String,
 }
 
 impl DnsRecord {
-    pub fn new(r#type: Type, name: String, value: String) -> DnsRecord {
+    pub fn new(r#type: TypeEnum, name: String, value: String) -> DnsRecord {
         DnsRecord {
             r#type,
             name,
@@ -34,15 +34,15 @@ impl DnsRecord {
     }
 }
 
-/// CNAMEリソースレコード(CNAME Resource Record)
+/// CNAME Resource Record
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum Type {
+pub enum TypeEnum {
     #[serde(rename = "CNAME")]
     Cname,
 }
 
-impl Default for Type {
-    fn default() -> Type {
+impl Default for TypeEnum {
+    fn default() -> TypeEnum {
         Self::Cname
     }
 }

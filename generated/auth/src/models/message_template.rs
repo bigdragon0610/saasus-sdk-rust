@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,10 +13,10 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct MessageTemplate {
-    /// タイトル(title)
+    /// Title
     #[serde(rename = "subject")]
     pub subject: String,
-    /// メッセージ(message)
+    /// Message
     #[serde(rename = "message")]
     pub message: String,
 }

@@ -13,13 +13,13 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct MeteringUnitTimestampCount {
-    /// 計測ユニット名(metering unit name)
+    /// Metering unit name
     #[serde(rename = "metering_unit_name")]
     pub metering_unit_name: String,
-    /// タイムスタンプ(timestamp)
+    /// Timestamp
     #[serde(rename = "timestamp")]
     pub timestamp: i32,
-    /// 件数(count)
+    /// Count
     #[serde(rename = "count")]
     pub count: i32,
 }

@@ -13,20 +13,21 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct MeteringUnit {
-    /// 計測ユニット名(metering unit name)
+    /// Metering unit name
     #[serde(rename = "unit_name")]
     pub unit_name: String,
     #[serde(rename = "aggregate_usage", skip_serializing_if = "Option::is_none")]
     pub aggregate_usage: Option<crate::models::AggregateUsage>,
-    /// 表示名(display name)
+    /// Display name
     #[serde(rename = "display_name")]
     pub display_name: String,
-    /// 説明(description)
+    /// Description
     #[serde(rename = "description")]
     pub description: String,
+    /// Universally Unique Identifier
     #[serde(rename = "id")]
     pub id: String,
-    /// メータリングユニットの使用済み設定(metering unit used settings)
+    /// Metering unit used settings
     #[serde(rename = "used")]
     pub used: bool,
 }

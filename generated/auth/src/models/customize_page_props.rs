@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,13 +13,13 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct CustomizePageProps {
-    /// 画面のHTMLを編集できます ※ 未提供の機能のため、変更・保存はできません  Edit page HTML ※ This function is not yet provided, so it cannot be changed or saved. 
+    /// Edit page HTML ※ This function is not yet provided, so it cannot be changed or saved. 
     #[serde(rename = "html_contents")]
     pub html_contents: String,
-    /// 利用規約の同意チェックボックスを表示するが設定されているか(display the terms of use agreement check box)
+    /// display the terms of use agreement check box
     #[serde(rename = "is_terms_of_service")]
     pub is_terms_of_service: bool,
-    /// プライバシーポリシーチェックボックスを表示するが設定されているか(show the privacy policy checkbox)
+    /// show the privacy policy checkbox
     #[serde(rename = "is_privacy_policy")]
     pub is_privacy_policy: bool,
 }

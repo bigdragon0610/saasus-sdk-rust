@@ -13,7 +13,7 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct EventBridgeSettings {
-    /// AWSアカウントID(AWS Account ID)
+    /// AWS Account ID
     #[serde(rename = "aws_account_id")]
     pub aws_account_id: String,
     #[serde(rename = "aws_region")]

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** | 名前(name) | 
-**display_name** | **String** | 表示名(display name) | 
-**description** | **String** | 説明(description) | 
+**name** | **String** | Name | 
+**display_name** | **String** | Display Name | 
+**description** | **String** | Description | 
 **r#type** | [**crate::models::UnitType**](UnitType.md) |  | 
 **currency** | [**crate::models::Currency**](Currency.md) |  | 
 

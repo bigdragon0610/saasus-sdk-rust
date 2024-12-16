@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,10 +13,10 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct UpdateSoftwareTokenParam {
-    /// アクセストークン(access token)
+    /// access token
     #[serde(rename = "access_token")]
     pub access_token: String,
-    /// 検証コード(verification code)
+    /// verification code
     #[serde(rename = "verification_code")]
     pub verification_code: String,
 }

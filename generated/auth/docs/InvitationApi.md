@@ -4,28 +4,28 @@ All URIs are relative to *https://api.saasus.io/v1/auth*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_tenant_invitation**](InvitationApi.md#create_tenant_invitation) | **Post** /tenants/{tenant_id}/invitations | テナントへの招待を作成(Create Tenant Invitation)
-[**delete_tenant_invitation**](InvitationApi.md#delete_tenant_invitation) | **Delete** /tenants/{tenant_id}/invitations/{invitation_id} | テナントへの招待を削除(Delete Tenant Invitation)
-[**get_invitation_validity**](InvitationApi.md#get_invitation_validity) | **Get** /invitations/{invitation_id}/validity | テナントへの招待の有効性を取得(Get Invitation Validity)
-[**get_tenant_invitation**](InvitationApi.md#get_tenant_invitation) | **Get** /tenants/{tenant_id}/invitations/{invitation_id} | テナントの招待情報を取得(Get Tenant Invitation)
-[**get_tenant_invitations**](InvitationApi.md#get_tenant_invitations) | **Get** /tenants/{tenant_id}/invitations | テナントの招待一覧を取得(Get Tenant Invitations)
-[**validate_invitation**](InvitationApi.md#validate_invitation) | **Patch** /invitations/{invitation_id}/validate | テナントへの招待を検証(Validate Invitation)
+[**create_tenant_invitation**](InvitationApi.md#create_tenant_invitation) | **Post** /tenants/{tenant_id}/invitations | Create Tenant Invitation
+[**delete_tenant_invitation**](InvitationApi.md#delete_tenant_invitation) | **Delete** /tenants/{tenant_id}/invitations/{invitation_id} | Delete Tenant Invitation
+[**get_invitation_validity**](InvitationApi.md#get_invitation_validity) | **Get** /invitations/{invitation_id}/validity | Get Invitation Validity
+[**get_tenant_invitation**](InvitationApi.md#get_tenant_invitation) | **Get** /tenants/{tenant_id}/invitations/{invitation_id} | Get Tenant Invitation
+[**get_tenant_invitations**](InvitationApi.md#get_tenant_invitations) | **Get** /tenants/{tenant_id}/invitations | Get Tenant Invitations
+[**validate_invitation**](InvitationApi.md#validate_invitation) | **Patch** /invitations/{invitation_id}/validate | Validate Invitation
 
 
 
 ## create_tenant_invitation
 
 > crate::models::Invitation create_tenant_invitation(tenant_id, create_tenant_invitation_param)
-テナントへの招待を作成(Create Tenant Invitation)
+Create Tenant Invitation
 
-テナントへの招待を作成します。  Create an invitation to the tenant. 
+Create an invitation to the tenant. 
 
 ### Parameters
 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**tenant_id** | **String** | テナントID(Tenant ID) | [required] |
+**tenant_id** | **String** | Tenant ID | [required] |
 **create_tenant_invitation_param** | Option<[**CreateTenantInvitationParam**](CreateTenantInvitationParam.md)> |  |  |
 
 ### Return type
@@ -47,17 +47,17 @@ Name | Type | Description  | Required | Notes
 ## delete_tenant_invitation
 
 > delete_tenant_invitation(tenant_id, invitation_id)
-テナントへの招待を削除(Delete Tenant Invitation)
+Delete Tenant Invitation
 
-テナントへの招待を削除します。  Delete an invitation to the tenant. 
+Delete an invitation for the tenant. 
 
 ### Parameters
 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**tenant_id** | **String** | テナントID(Tenant ID) | [required] |
-**invitation_id** | **String** | 招待ID(Invitation ID) | [required] |
+**tenant_id** | **String** | Tenant ID | [required] |
+**invitation_id** | **String** | Invitation ID | [required] |
 
 ### Return type
 
@@ -78,16 +78,16 @@ Name | Type | Description  | Required | Notes
 ## get_invitation_validity
 
 > crate::models::InvitationValidity get_invitation_validity(invitation_id)
-テナントへの招待の有効性を取得(Get Invitation Validity)
+Get Invitation Validity
 
-テナントへの招待の有効性を取得します。  Get the validity of an invitation to the tenant. 
+Get the validity of an invitation to the tenant. 
 
 ### Parameters
 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**invitation_id** | **String** | 招待ID(Invitation ID) | [required] |
+**invitation_id** | **String** | Invitation ID | [required] |
 
 ### Return type
 
@@ -108,17 +108,17 @@ Name | Type | Description  | Required | Notes
 ## get_tenant_invitation
 
 > crate::models::Invitation get_tenant_invitation(tenant_id, invitation_id)
-テナントの招待情報を取得(Get Tenant Invitation)
+Get Tenant Invitation
 
-テナントへの招待情報を取得します。  Get invitation information to the tenant. 
+Get invitation information for the tenant. 
 
 ### Parameters
 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**tenant_id** | **String** | テナントID(Tenant ID) | [required] |
-**invitation_id** | **String** | 招待ID(Invitation ID) | [required] |
+**tenant_id** | **String** | Tenant ID | [required] |
+**invitation_id** | **String** | Invitation ID | [required] |
 
 ### Return type
 
@@ -139,16 +139,16 @@ Name | Type | Description  | Required | Notes
 ## get_tenant_invitations
 
 > crate::models::Invitations get_tenant_invitations(tenant_id)
-テナントの招待一覧を取得(Get Tenant Invitations)
+Get Tenant Invitations
 
-テナントへの招待一覧を取得します。  Get a list of invitations to the tenant. 
+Get a list of invitations to the tenant. 
 
 ### Parameters
 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**tenant_id** | **String** | テナントID(Tenant ID) | [required] |
+**tenant_id** | **String** | Tenant ID | [required] |
 
 ### Return type
 
@@ -169,16 +169,16 @@ Name | Type | Description  | Required | Notes
 ## validate_invitation
 
 > validate_invitation(invitation_id, validate_invitation_param)
-テナントへの招待を検証(Validate Invitation)
+Validate Invitation
 
-テナントへの招待を検証します。  Validate an invitation to the tenant. 
+Validate an invitation to the tenant. 
 
 ### Parameters
 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**invitation_id** | **String** | 招待ID(Invitation ID) | [required] |
+**invitation_id** | **String** | Invitation ID | [required] |
 **validate_invitation_param** | Option<[**ValidateInvitationParam**](ValidateInvitationParam.md)> |  |  |
 
 ### Return type

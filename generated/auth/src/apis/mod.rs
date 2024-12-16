@@ -63,6 +63,8 @@ mod role_api;
 pub use self::role_api::{ RoleApi, RoleApiClient };
 mod saas_user_api;
 pub use self::saas_user_api::{ SaasUserApi, SaasUserApiClient };
+mod single_tenant_api;
+pub use self::single_tenant_api::{ SingleTenantApi, SingleTenantApiClient };
 mod tenant_api;
 pub use self::tenant_api::{ TenantApi, TenantApiClient };
 mod tenant_attribute_api;

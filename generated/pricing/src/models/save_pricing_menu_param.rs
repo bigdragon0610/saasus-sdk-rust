@@ -13,16 +13,16 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct SavePricingMenuParam {
-    /// メニュー名(menu name)
+    /// Menu name
     #[serde(rename = "name")]
     pub name: String,
-    /// メニュー表示名(menu display name)
+    /// Menu display name
     #[serde(rename = "display_name")]
     pub display_name: String,
-    /// メニュー説明(menu description)
+    /// Menu description
     #[serde(rename = "description")]
     pub description: String,
-    /// 追加するユニットID(unit id to add)
+    /// Unit IDs to add
     #[serde(rename = "unit_ids")]
     pub unit_ids: Vec<String>,
 }

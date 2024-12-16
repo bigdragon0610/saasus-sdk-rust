@@ -4,18 +4,18 @@ All URIs are relative to *https://api.saasus.io/v1/pricing*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_tax_rate**](TaxRateApi.md#create_tax_rate) | **Post** /tax-rates | 税率の作成(Create Tax Rate)
-[**get_tax_rates**](TaxRateApi.md#get_tax_rates) | **Get** /tax-rates | 税率を取得します(Get Tax Rates)
-[**update_tax_rate**](TaxRateApi.md#update_tax_rate) | **Patch** /tax-rates/{tax_rate_id} | 税率を更新(Update Tax Rate)
+[**create_tax_rate**](TaxRateApi.md#create_tax_rate) | **Post** /tax-rates | Create Tax Rate
+[**get_tax_rates**](TaxRateApi.md#get_tax_rates) | **Get** /tax-rates | Get Tax Rates
+[**update_tax_rate**](TaxRateApi.md#update_tax_rate) | **Patch** /tax-rates/{tax_rate_id} | Update Tax Rate
 
 
 
 ## create_tax_rate
 
 > crate::models::TaxRate create_tax_rate(body)
-税率の作成(Create Tax Rate)
+Create Tax Rate
 
-税率を作成します。  Creates a tax rate. 
+Creates a tax rate. 
 
 ### Parameters
 
@@ -43,9 +43,9 @@ Name | Type | Description  | Required | Notes
 ## get_tax_rates
 
 > crate::models::TaxRates get_tax_rates()
-税率を取得します(Get Tax Rates)
+Get Tax Rates
 
-税率を取得します。  Get all Tax Rates 
+Get all Tax Rates 
 
 ### Parameters
 
@@ -70,16 +70,16 @@ This endpoint does not need any parameter.
 ## update_tax_rate
 
 > update_tax_rate(tax_rate_id, update_tax_rate_param)
-税率を更新(Update Tax Rate)
+Update Tax Rate
 
-税率を更新します。  Update tax rate. 
+Update tax rate. 
 
 ### Parameters
 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**tax_rate_id** | **String** | 税率ID(tax rate ID) | [required] |
+**tax_rate_id** | **String** | Tax Rate ID | [required] |
 **update_tax_rate_param** | Option<[**UpdateTaxRateParam**](UpdateTaxRateParam.md)> |  |  |
 
 ### Return type

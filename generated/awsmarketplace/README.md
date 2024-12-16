@@ -25,21 +25,21 @@ All URIs are relative to *https://api.saasus.io/v1/awsmarketplace*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AwsMarketplaceApi* | [**create_customer**](docs/AwsMarketplaceApi.md#create_customer) | **Post** /customers | AWS Marketplaceに連携する顧客情報を新規作成(Create customer information to be linked to AWS Marketplace)
-*AwsMarketplaceApi* | [**get_catalog_entity_visibility**](docs/AwsMarketplaceApi.md#get_catalog_entity_visibility) | **Get** /catalog-entity/visibility | AWS Marketplaceから商品の公開状況を取得(Obtain product publication status from AWS Marketplace)
-*AwsMarketplaceApi* | [**get_cloud_formation_launch_stack_link**](docs/AwsMarketplaceApi.md#get_cloud_formation_launch_stack_link) | **Get** /cloudformation-launch-stack-link | AWS CloudFormationのスタック作成リンクを取得(Get the link to create the AWS CloudFormation stack)
-*AwsMarketplaceApi* | [**get_customer**](docs/AwsMarketplaceApi.md#get_customer) | **Get** /customers/{customer_identifier} | AWS Marketplaceに連携する顧客情報を取得(Get customer information to be linked to AWS Marketplace)
-*AwsMarketplaceApi* | [**get_customers**](docs/AwsMarketplaceApi.md#get_customers) | **Get** /customers | AWS Marketplaceに連携する顧客情報の一覧を取得(Get a list of customer information to be linked to AWS Marketplace)
-*AwsMarketplaceApi* | [**get_listing_status**](docs/AwsMarketplaceApi.md#get_listing_status) | **Get** /listing-status | AWS Marketplaceの出品状況を取得(Get AWS Marketplace Listing Status)
-*AwsMarketplaceApi* | [**get_plan_by_plan_name**](docs/AwsMarketplaceApi.md#get_plan_by_plan_name) | **Get** /plans/{plan_name} | AWSMarketplaceに連携するプラン情報を取得(Obtain plan information to link to AWS Marketplace)
-*AwsMarketplaceApi* | [**get_plans**](docs/AwsMarketplaceApi.md#get_plans) | **Get** /plans | AWS Marketplaceに連携するプラン情報を取得(Obtain plan information to link to AWS Marketplace)
-*AwsMarketplaceApi* | [**get_settings**](docs/AwsMarketplaceApi.md#get_settings) | **Get** /settings | AWS Marketplaceの設定を取得(Get AWS Marketplace Settings)
-*AwsMarketplaceApi* | [**save_plan**](docs/AwsMarketplaceApi.md#save_plan) | **Put** /plans | AWS Marketplaceに連携するプラン情報を登録(Save plan information to be linked to AWSMarketplace)
-*AwsMarketplaceApi* | [**sync_customer**](docs/AwsMarketplaceApi.md#sync_customer) | **Post** /customers/{customer_identifier}/sync | AWS Marketplaceの顧客情報をSaaSusに同期します(Sync AWS Marketplace customer information to SaaSus)
-*AwsMarketplaceApi* | [**update_listing_status**](docs/AwsMarketplaceApi.md#update_listing_status) | **Put** /listing-status | AWS Marketplaceの出品状況を更新(Update AWS Marketplace Listing Status)
-*AwsMarketplaceApi* | [**update_settings**](docs/AwsMarketplaceApi.md#update_settings) | **Put** /settings | AWS Marketplaceの設定を更新(Update AWS Marketplace Settings)
-*AwsMarketplaceApi* | [**verify_registration_token**](docs/AwsMarketplaceApi.md#verify_registration_token) | **Post** /registration-token/verify | Registration Tokenを検証(Verify Registration Token)
-*ErrorApi* | [**return_internal_server_error**](docs/ErrorApi.md#return_internal_server_error) | **Get** /errors/internal-server-error | ステータスコード500でサーバーエラーを返却(Return Internal Server Error)
+*AwsMarketplaceApi* | [**create_customer**](docs/AwsMarketplaceApi.md#create_customer) | **Post** /customers | Create customer information to be linked to AWS Marketplace
+*AwsMarketplaceApi* | [**get_catalog_entity_visibility**](docs/AwsMarketplaceApi.md#get_catalog_entity_visibility) | **Get** /catalog-entity/visibility | Obtain product publication status from AWS Marketplace
+*AwsMarketplaceApi* | [**get_cloud_formation_launch_stack_link**](docs/AwsMarketplaceApi.md#get_cloud_formation_launch_stack_link) | **Get** /cloudformation-launch-stack-link | Get the link to create the AWS CloudFormation stack
+*AwsMarketplaceApi* | [**get_customer**](docs/AwsMarketplaceApi.md#get_customer) | **Get** /customers/{customer_identifier} | Get customer information to be linked to AWS Marketplace
+*AwsMarketplaceApi* | [**get_customers**](docs/AwsMarketplaceApi.md#get_customers) | **Get** /customers | Get a list of customer information to be linked to AWS Marketplace
+*AwsMarketplaceApi* | [**get_listing_status**](docs/AwsMarketplaceApi.md#get_listing_status) | **Get** /listing-status | Get AWS Marketplace Listing Status
+*AwsMarketplaceApi* | [**get_plan_by_plan_name**](docs/AwsMarketplaceApi.md#get_plan_by_plan_name) | **Get** /plans/{plan_name} | Obtain plan information to link to AWS Marketplace
+*AwsMarketplaceApi* | [**get_plans**](docs/AwsMarketplaceApi.md#get_plans) | **Get** /plans | Obtain plan information to link to AWS Marketplace
+*AwsMarketplaceApi* | [**get_settings**](docs/AwsMarketplaceApi.md#get_settings) | **Get** /settings | Get AWS Marketplace Settings
+*AwsMarketplaceApi* | [**save_plan**](docs/AwsMarketplaceApi.md#save_plan) | **Put** /plans | Save plan information to be linked to AWSMarketplace
+*AwsMarketplaceApi* | [**sync_customer**](docs/AwsMarketplaceApi.md#sync_customer) | **Post** /customers/{customer_identifier}/sync | Sync AWS Marketplace customer information to SaaSus
+*AwsMarketplaceApi* | [**update_listing_status**](docs/AwsMarketplaceApi.md#update_listing_status) | **Put** /listing-status | Update AWS Marketplace Listing Status
+*AwsMarketplaceApi* | [**update_settings**](docs/AwsMarketplaceApi.md#update_settings) | **Put** /settings | Update AWS Marketplace Settings
+*AwsMarketplaceApi* | [**verify_registration_token**](docs/AwsMarketplaceApi.md#verify_registration_token) | **Post** /registration-token/verify | Verify Registration Token
+*ErrorApi* | [**return_internal_server_error**](docs/ErrorApi.md#return_internal_server_error) | **Get** /errors/internal-server-error | Return Internal Server Error
 
 
 ## Documentation For Models

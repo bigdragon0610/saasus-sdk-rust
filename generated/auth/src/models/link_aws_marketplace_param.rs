@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,10 +13,10 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct LinkAwsMarketplaceParam {
-    /// テナントID(tenant ID)
+    /// Tenant ID
     #[serde(rename = "tenant_id")]
     pub tenant_id: String,
-    /// アクセストークン(access token)
+    /// Access token
     #[serde(rename = "access_token")]
     pub access_token: String,
     /// Registration Token

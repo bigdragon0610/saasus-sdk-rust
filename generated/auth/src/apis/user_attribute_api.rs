@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -35,6 +35,7 @@ impl<C: hyper::client::connect::Connect> UserAttributeApiClient<C>
 }
 
 pub trait UserAttributeApi {
+    fn create_saas_user_attribute(&self, body: Option<crate::models::Attribute>) -> Pin<Box<dyn Future<Output = Result<crate::models::Attribute, Error>>>>;
     fn create_user_attribute(&self, body: Option<crate::models::Attribute>) -> Pin<Box<dyn Future<Output = Result<crate::models::Attribute, Error>>>>;
     fn delete_user_attribute(&self, attribute_name: &str) -> Pin<Box<dyn Future<Output = Result<(), Error>>>>;
     fn get_user_attributes(&self, ) -> Pin<Box<dyn Future<Output = Result<crate::models::UserAttributes, Error>>>>;
@@ -42,6 +43,15 @@ pub trait UserAttributeApi {
 
 impl<C: hyper::client::connect::Connect>UserAttributeApi for UserAttributeApiClient<C>
     where C: Clone + std::marker::Send + Sync {
+    #[allow(unused_mut)]
+    fn create_saas_user_attribute(&self, body: Option<crate::models::Attribute>) -> Pin<Box<dyn Future<Output = Result<crate::models::Attribute, Error>>>> {
+        let mut req = __internal_request::Request::new(hyper::Method::POST, "/saas-user-attributes".to_string())
+        ;
+        req = req.with_body_param(body);
+
+        req.execute(self.configuration.borrow())
+    }
+
     #[allow(unused_mut)]
     fn create_user_attribute(&self, body: Option<crate::models::Attribute>) -> Pin<Box<dyn Future<Output = Result<crate::models::Attribute, Error>>>> {
         let mut req = __internal_request::Request::new(hyper::Method::POST, "/user-attributes".to_string())

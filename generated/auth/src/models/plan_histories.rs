@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,7 +13,7 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct PlanHistories {
-    /// 料金プラン履歴
+    /// Plan History
     #[serde(rename = "plan_histories")]
     pub plan_histories: Vec<crate::models::PlanHistory>,
 }

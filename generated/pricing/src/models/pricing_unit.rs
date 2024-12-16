@@ -10,63 +10,11 @@
 
 
 
-
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
-pub struct PricingUnit {
-    #[serde(rename = "id")]
-    pub id: String,
-    #[serde(rename = "metering_unit_id")]
-    pub metering_unit_id: String,
-    #[serde(rename = "recurring_interval")]
-    pub recurring_interval: crate::models::RecurringInterval,
-    #[serde(rename = "used")]
-    pub used: bool,
-    /// 上限値(upper limit)
-    #[serde(rename = "upper_count")]
-    pub upper_count: i32,
-    #[serde(rename = "metering_unit_name")]
-    pub metering_unit_name: String,
-    #[serde(rename = "aggregate_usage", skip_serializing_if = "Option::is_none")]
-    pub aggregate_usage: Option<crate::models::AggregateUsage>,
-    /// 名前(name)
-    #[serde(rename = "name")]
-    pub name: String,
-    /// 表示名(display name)
-    #[serde(rename = "display_name")]
-    pub display_name: String,
-    /// 説明(description)
-    #[serde(rename = "description")]
-    pub description: String,
-    #[serde(rename = "type")]
-    pub r#type: crate::models::UnitType,
-    #[serde(rename = "currency")]
-    pub currency: crate::models::Currency,
-    #[serde(rename = "tiers")]
-    pub tiers: Vec<crate::models::PricingTier>,
-    /// 料金(price)
-    #[serde(rename = "unit_amount")]
-    pub unit_amount: i32,
+#[serde(tag = "")]
+pub enum PricingUnit {
 }
 
-impl PricingUnit {
-    pub fn new(id: String, metering_unit_id: String, recurring_interval: crate::models::RecurringInterval, used: bool, upper_count: i32, metering_unit_name: String, name: String, display_name: String, description: String, r#type: crate::models::UnitType, currency: crate::models::Currency, tiers: Vec<crate::models::PricingTier>, unit_amount: i32) -> PricingUnit {
-        PricingUnit {
-            id,
-            metering_unit_id,
-            recurring_interval,
-            used,
-            upper_count,
-            metering_unit_name,
-            aggregate_usage: None,
-            name,
-            display_name,
-            description,
-            r#type,
-            currency,
-            tiers,
-            unit_amount,
-        }
-    }
-}
+
 
 

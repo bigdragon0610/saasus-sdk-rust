@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -15,23 +15,23 @@
 pub struct UserAvailableTenant {
     #[serde(rename = "id")]
     pub id: String,
-    /// テナント名(tenant name)
+    /// Tenant Name
     #[serde(rename = "name")]
     pub name: String,
     #[serde(rename = "completed_sign_up")]
     pub completed_sign_up: bool,
-    /// 環境情報、役割(ロール)情報(environmental info, role info)
+    /// environmental info, role info
     #[serde(rename = "envs")]
     pub envs: Vec<crate::models::UserAvailableEnv>,
-    /// ユーザー追加属性(user additional attributes)
+    /// user additional attributes
     #[serde(rename = "user_attribute")]
     pub user_attribute: ::std::collections::HashMap<String, serde_json::Value>,
-    /// バックオフィス担当者のメール(back office contact email)
+    /// back office contact email
     #[serde(rename = "back_office_staff_email")]
     pub back_office_staff_email: String,
     #[serde(rename = "plan_id", skip_serializing_if = "Option::is_none")]
     pub plan_id: Option<String>,
-    /// テナントの支払い状況(tenant payment status)  ※ 現在はストライプ連携時のみ返却されます。Currently, it is returned only when stripe is linked. 
+    /// tenant payment status ※ Currently, it is returned only when stripe is linked. 
     #[serde(rename = "is_paid", skip_serializing_if = "Option::is_none")]
     pub is_paid: Option<bool>,
 }

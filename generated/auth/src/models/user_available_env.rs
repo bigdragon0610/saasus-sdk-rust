@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -15,13 +15,13 @@
 pub struct UserAvailableEnv {
     #[serde(rename = "id")]
     pub id: i32,
-    /// 環境名(env name)
+    /// env name
     #[serde(rename = "name")]
     pub name: String,
-    /// 環境表示名(env display name)
+    /// env display name
     #[serde(rename = "display_name", skip_serializing_if = "Option::is_none")]
     pub display_name: Option<String>,
-    /// 役割(ロール)情報(role info)
+    /// role info
     #[serde(rename = "roles")]
     pub roles: Vec<crate::models::Role>,
 }

@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,13 +13,13 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Credentials {
-    /// IDトークン(ID token)
+    /// ID token
     #[serde(rename = "id_token")]
     pub id_token: String,
-    /// アクセストークン(access token)
+    /// Access token
     #[serde(rename = "access_token")]
     pub access_token: String,
-    /// リフレッシュトークン(refresh token)
+    /// Refresh token
     #[serde(rename = "refresh_token", skip_serializing_if = "Option::is_none")]
     pub refresh_token: Option<String>,
 }

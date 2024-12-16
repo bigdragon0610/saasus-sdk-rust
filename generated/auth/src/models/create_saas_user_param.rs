@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,19 +13,19 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct CreateSaasUserParam {
-    /// メールアドレス(E-mail)
+    /// E-mail
     #[serde(rename = "email")]
     pub email: String,
-    /// パスワード(Password)
-    #[serde(rename = "password")]
-    pub password: String,
+    /// Password
+    #[serde(rename = "password", skip_serializing_if = "Option::is_none")]
+    pub password: Option<String>,
 }
 
 impl CreateSaasUserParam {
-    pub fn new(email: String, password: String) -> CreateSaasUserParam {
+    pub fn new(email: String) -> CreateSaasUserParam {
         CreateSaasUserParam {
             email,
-            password,
+            password: None,
         }
     }
 }

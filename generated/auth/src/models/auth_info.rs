@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,7 +13,7 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct AuthInfo {
-    /// 認証後遷移先(Redirect After Authentication)
+    /// Redirect After Authentication
     #[serde(rename = "callback_url")]
     pub callback_url: String,
 }

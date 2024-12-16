@@ -15,16 +15,16 @@
 pub struct PricingPlanProps {
     #[serde(rename = "pricing_menus")]
     pub pricing_menus: Vec<crate::models::PricingMenu>,
-    /// 料金プラン名(pricing plan name)
+    /// Pricing plan name
     #[serde(rename = "name")]
     pub name: String,
-    /// 料金プラン表示名(pricing plan display name)
+    /// Pricing plan display name
     #[serde(rename = "display_name")]
     pub display_name: String,
-    /// 料金プラン説明(pricing plan description)
+    /// Pricing plan description
     #[serde(rename = "description")]
     pub description: String,
-    /// 料金プランの使用済み設定(pricing plan used settings)
+    /// Pricing plan used settings
     #[serde(rename = "used")]
     pub used: bool,
 }

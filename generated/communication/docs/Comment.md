@@ -5,7 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | 
-**user_id** | **String** |  | 
 **created_at** | **i32** |  | 
 **body** | **String** |  | 
 

@@ -13,7 +13,7 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct CreateEventBridgeEventParam {
-    /// イベントメッセージ(event message)
+    /// event message
     #[serde(rename = "event_messages")]
     pub event_messages: Vec<crate::models::EventMessage>,
 }

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**email** | **String** | メールアドレス(E-mail) | 
-**password** | **String** | パスワード(Password) | 
+**email** | **String** | E-mail | 
+**password** | Option<**String**> | Password | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

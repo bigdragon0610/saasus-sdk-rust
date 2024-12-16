@@ -1,5 +1,4 @@
 .gitignore
-Cargo.toml
 README.md
 docs/AwsRegion.md
 docs/CreateEventBridgeEventParam.md

@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,7 +13,7 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct CreateTenantUserRolesParam {
-    /// 役割(ロール)情報(Role Info)
+    /// Role Info
     #[serde(rename = "role_names")]
     pub role_names: Vec<String>,
 }

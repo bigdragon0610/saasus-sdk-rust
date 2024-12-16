@@ -13,13 +13,13 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct PricingUnitBaseProps {
-    /// 名前(name)
+    /// Name
     #[serde(rename = "name")]
     pub name: String,
-    /// 表示名(display name)
+    /// Display Name
     #[serde(rename = "display_name")]
     pub display_name: String,
-    /// 説明(description)
+    /// Description
     #[serde(rename = "description")]
     pub description: String,
     #[serde(rename = "type")]

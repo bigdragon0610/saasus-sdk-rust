@@ -13,22 +13,22 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct TaxRateProps {
-    /// 税率の名前(name of tax rate)
+    /// Name of tax rate
     #[serde(rename = "name")]
     pub name: String,
-    /// 表示名(display name)
+    /// Display name
     #[serde(rename = "display_name")]
     pub display_name: String,
-    /// 税率(percentage)
+    /// Percentage
     #[serde(rename = "percentage")]
     pub percentage: f32,
-    /// 内税かどうか(inclusive or not)
+    /// Inclusive or not
     #[serde(rename = "inclusive")]
     pub inclusive: bool,
-    /// ISO 3166-1 alpha-2 の国コード(Country code of ISO 3166-1 alpha-2)
+    /// Country code of ISO 3166-1 alpha-2
     #[serde(rename = "country")]
     pub country: String,
-    /// 説明(description)
+    /// Description
     #[serde(rename = "description")]
     pub description: String,
 }

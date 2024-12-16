@@ -25,12 +25,12 @@ All URIs are relative to *https://api.saasus.io/v1/integration*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ErrorApi* | [**return_internal_server_error**](docs/ErrorApi.md#return_internal_server_error) | **Get** /errors/internal-server-error | ステータスコード500でサーバーエラーを返却(Return Internal Server Error)
-*EventBridgeApi* | [**create_event_bridge_event**](docs/EventBridgeApi.md#create_event_bridge_event) | **Post** /eventbridge/event | イベント連携の送信(Send Events)
-*EventBridgeApi* | [**create_event_bridge_test_event**](docs/EventBridgeApi.md#create_event_bridge_test_event) | **Post** /eventbridge/test-event | イベント連携のテスト送信(Test EventBridge Connection)
-*EventBridgeApi* | [**delete_event_bridge_settings**](docs/EventBridgeApi.md#delete_event_bridge_settings) | **Delete** /eventbridge/info | イベント連携設定を削除(Delete EventBridge Settings)
-*EventBridgeApi* | [**get_event_bridge_settings**](docs/EventBridgeApi.md#get_event_bridge_settings) | **Get** /eventbridge/info | イベント連携設定を取得(Get EventBridge Settings)
-*EventBridgeApi* | [**save_event_bridge_settings**](docs/EventBridgeApi.md#save_event_bridge_settings) | **Put** /eventbridge/info | イベント連携設定を更新(Update EventBridge Settings)
+*ErrorApi* | [**return_internal_server_error**](docs/ErrorApi.md#return_internal_server_error) | **Get** /errors/internal-server-error | Return Internal Server Error
+*EventBridgeApi* | [**create_event_bridge_event**](docs/EventBridgeApi.md#create_event_bridge_event) | **Post** /eventbridge/event | Send Events
+*EventBridgeApi* | [**create_event_bridge_test_event**](docs/EventBridgeApi.md#create_event_bridge_test_event) | **Post** /eventbridge/test-event | Test EventBridge Connection
+*EventBridgeApi* | [**delete_event_bridge_settings**](docs/EventBridgeApi.md#delete_event_bridge_settings) | **Delete** /eventbridge/info | Delete EventBridge Settings
+*EventBridgeApi* | [**get_event_bridge_settings**](docs/EventBridgeApi.md#get_event_bridge_settings) | **Get** /eventbridge/info | Get EventBridge Settings
+*EventBridgeApi* | [**save_event_bridge_settings**](docs/EventBridgeApi.md#save_event_bridge_settings) | **Put** /eventbridge/info | Update EventBridge Settings
 
 
 ## Documentation For Models

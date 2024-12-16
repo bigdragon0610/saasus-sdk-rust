@@ -4,16 +4,16 @@ All URIs are relative to *https://api.saasus.io/v1/billing*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**return_internal_server_error**](ErrorApi.md#return_internal_server_error) | **Get** /errors/internal-server-error | ステータスコード500でサーバーエラーを返却(Return Internal Server Error)
+[**return_internal_server_error**](ErrorApi.md#return_internal_server_error) | **Get** /errors/internal-server-error | Return Internal Server Error
 
 
 
 ## return_internal_server_error
 
 > return_internal_server_error()
-ステータスコード500でサーバーエラーを返却(Return Internal Server Error)
+Return Internal Server Error
 
-テスト用途で使用するエンドポイントです。ステータスコード500でサーバーエラーを返却します。  This endpoint is used for testing purposes. Returns a server error with status code 500. 
+This endpoint is used for testing purposes. Returns a server error with status code 500. 
 
 ### Parameters
 

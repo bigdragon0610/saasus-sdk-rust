@@ -1,7 +1,7 @@
 /*
  * SaaSus Auth API Schema
  *
- * スキーマ
+ * Schema
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -13,13 +13,13 @@
 
 #[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct TenantProps {
-    /// テナント名(tenant name)
+    /// tenant name
     #[serde(rename = "name")]
     pub name: String,
-    /// 属性情報(attribute info)
+    /// attribute info
     #[serde(rename = "attributes")]
     pub attributes: ::std::collections::HashMap<String, serde_json::Value>,
-    /// 事務管理部門スタッフメールアドレス(administrative staff email address)
+    /// administrative staff email address
     #[serde(rename = "back_office_staff_email")]
     pub back_office_staff_email: String,
 }
